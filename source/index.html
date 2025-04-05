@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <title>Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
@@ -14,10 +18,15 @@
     <div class="main-header__container page-container">
       <div class="main-header__logo-container">
         <a class="main-header__logo-image logo" href="#">
-          <img class="logo__image" src="" width="" height="" alt="Логотип">
+          <picture>
+            <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo_desktop.svg">
+            <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo_tablet.svg">
+            <img class="logo__image" src="images/logo/logo_mobile.svg" width="33" height="38" alt="Логотип">
+          </picture>
         </a>
-        <a class="main-header__logo-brend logo" href="#">
-          <img class="logo__brend" src="" width="" height="" alt="Бренд">
+        <a class="main-header__logo-brand logo" href="#">
+          <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/brand_desktop.svg">
+          <img class="logo__brand" src="images/logo/brand.svg" width="101" height="18" alt="Бренд">
         </a>
       </div>
       <nav class="main-nav">
@@ -43,7 +52,11 @@
       <div class="hero__container page-container">
         <h1 class="hero__title basic-title">Функциональное питание для котов</h1>
         <p class="hero__text">Занялся собой? Займись котом!</p>
-        <img class="hero__image" src="" width="" height="" alt="Продукт Кэт энерджи">
+        <picture>
+          <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/hero/cat_energy_desktop@1x.png@1x.png 1x, images/hero/cat_energy_desktop@2x.png 2x">
+          <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/hero/cat_energy_tablet@1x.png 1x, images/hero/cat_energy_tablet@2x.png 2x">
+          <img class="hero__image" src="images/hero/cat_energy_mobile@1x.png" srcset="images/hero/cat_energy_mobile@2x.png 2x" width="280" height="270" alt="Продукт Кэт энерджи">
+        </picture>
         <a class="hero__button button" href="#">Подобрать программу</a>
       </div>
     </section>
@@ -102,6 +115,19 @@
         </dl>
         <p class="example__data-text">Затраты на питание:</p>
         <p class="example__data-text">15 000 РУБ.</p>
+        <div class="example__slider-container slider">
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/slider/before_tablet@1x.png 1x, images/slider/before_tablet@2x.png 2x">
+            <img class="slider__image-before" src="images/slider/before_mobile@1x.png" srcset="images/slider/before_mobile@2x.png 2x" width="280" height="256" alt="Фото до перехода на питание Кэт энерджи">
+          </picture>
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/slider/after_tablet@1x.png 1x, images/slider/after_tablet@2x.png 2x">
+            <img class="slider__image-after" src="images/slider/after_mobile@1x.png" srcset="images/slider/after_mobile@2x.png 2x" width="280" height="256" alt="Фото после перехода на питание Кэт энерджи">
+          </picture>
+          <button class="slider__button" type="button">
+            <span class="visually-hidden">Передвинуть ползунок</span>
+          </button>
+        </div>
       </div>
     </section>
     <section class="invite">
