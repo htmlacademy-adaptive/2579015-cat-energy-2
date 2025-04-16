@@ -1,0 +1,21 @@
+.program {
+  background-color: $background-default-color;
+}
+
+.program__title {
+  @include font-setting($secondary-font, 24px, 400, 37px, $dark-color);
+  @include font-adaptive($tablet-width, 36px, 400, 36px);
+  text-transform: uppercase;
+}
+
+.program__desc {
+  @media (min-width: $tablet-width) {
+    color: $dark-color;
+  }
+}
+
+.program__link {
+  @include font-setting($secondary-font, 16px, 400, 16px, $dark-color);
+  @include font-adaptive($tablet-width, 20px, 400, 30px);
+  text-transform: uppercase;
+}

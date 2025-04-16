@@ -1,0 +1,8 @@
+.subscribe-form__control::placeholder {
+  @include font-setting($secondary-font, 20px, 400, 30px, $basic-color);
+  text-transform: uppercase;
+}
+
+.subscribe-form__button {
+  @include font-setting-short(20px, 400, 26px);
+}

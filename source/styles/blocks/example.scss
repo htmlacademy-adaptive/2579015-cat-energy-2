@@ -1,0 +1,20 @@
+.example {
+  @include background-adaptive($tablet-width, linear-gradient($light-color 43%, $background-dark-color 43%));
+  @include background-adaptive($desktop-width, linear-gradient($light-color 23%, $background-dark-color 23%));
+  background-color: $background-dark-color;
+}
+
+.example__data-desc {
+  @include font-setting-short(12px, 400, 12px);
+  @include font-adaptive($tablet-width, 14px, 400, 14px);
+}
+
+.example__data-value {
+  @include font-setting($secondary-font, 24px, 400, 24px, $dark-color);
+  @include font-adaptive($tablet-width, 30px, 400, 37px);
+}
+
+.example__data-text {
+  @include font-setting($secondary-font, 14px, 400, 20px, $dark-color);
+  @include font-adaptive($tablet-width, 20px, 400, 20px);
+}

@@ -1,0 +1,5 @@
+.invite__title {
+  @include font-setting($secondary-font, 16px, 400, 20px, $title-special-color);
+  @include font-adaptive($tablet-width, 20px, 400, 26px);
+  text-transform: uppercase;
+}

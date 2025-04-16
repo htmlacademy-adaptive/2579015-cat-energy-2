@@ -1,0 +1,8 @@
+.sub-products__promo {
+  background-color: $accent-color;
+  color: $light-color;
+}
+
+.sub-products__promo-text {
+  @include font-setting-short(16px, 400, 20px);
+}

@@ -1,0 +1,40 @@
+// Подключение шрифта
+@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    src: $font-src;
+    font-display: swap;
+  }
+}
+
+// Настройка шрифта
+@mixin font-setting($font-family, $font-size, $font-weight, $line-height, $color) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+// Настройка шрифта(укороченный вариант)
+@mixin font-setting-short($font-size, $font-weight, $line-height) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+// Настройка шрифта для заданной ширины
+@mixin font-adaptive($width, $font-size, $font-weight, $line-height) {
+  @media (min-width: $width) {
+    @include font-setting-short($font-size, $font-weight, $line-height);
+  }
+}
+
+// Настройка фона для заданной ширины
+@mixin background-adaptive($width, $background) {
+  @media (min-width: $width) {
+    background: $background;
+  }
+}

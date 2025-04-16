@@ -1,0 +1,5 @@
+.secondary-title {
+  @include font-setting($secondary-font, 24px, 400, 24px, $dark-color);
+  @include font-adaptive($tablet-width, 32px, 400, 32px);
+  @include font-adaptive($desktop-width, 40px, 400, 40px);
+}

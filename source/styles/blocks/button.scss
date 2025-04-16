@@ -1,0 +1,8 @@
+.button {
+  @include font-setting($secondary-font, 16px, 400, 20px, $light-color);
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $accent-color;
+  border: none;
+}

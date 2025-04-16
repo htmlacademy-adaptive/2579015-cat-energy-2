@@ -1,0 +1,10 @@
+.sub-product__text {
+  @include font-setting-short(14px, 400, 14px);
+  @include font-adaptive($tablet-width, 16px, 400, 20px);
+}
+
+.sub-product__title {
+  @include font-setting($secondary-font, 16px, 400, 16px, $title-default-color);
+  @include font-adaptive($tablet-width, 20px, 400, 20px);
+  text-transform: uppercase;
+}

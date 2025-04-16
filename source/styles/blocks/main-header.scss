@@ -1,0 +1,4 @@
+.main-header--accent {
+  @include background-adaptive($desktop-width, linear-gradient(to right, $light-color 50%, $accent-color 50%));
+  color: $light-color;
+}

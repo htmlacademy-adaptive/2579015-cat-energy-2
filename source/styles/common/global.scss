@@ -1,1 +1,12 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  @include font-setting($primary-font, 14px, 400, 18px, $basic-color);
+  @include font-adaptive($tablet-width, 16px, 400, 24px);
+  margin: 0;
+}

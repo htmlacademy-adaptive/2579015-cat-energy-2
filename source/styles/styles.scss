@@ -1,7 +1,30 @@
 /* GLOBAL */
 @import "./common/variables.scss";
-@import "./common/global.scss";
+@import "./common/mixins.scss";
 @import "./common/fonts.scss";
+@import "./common/global.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+/* Сброс дефолтных настроек */
+@import "./blocks/reset-link.scss";
+@import "./blocks/reset-list.scss";
+/* Базовые классы */
+@import "./blocks/basic-title.scss";
+@import "./blocks/secondary-title.scss";
+@import "./blocks/button.scss";
+@import "./blocks/page-container.scss";
+/* Секционные стили */
+@import "./blocks/main-header.scss";
+@import "./blocks/site-list.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/program.scss";
+@import "./blocks/example.scss";
+@import "./blocks/invite.scss";
+@import "./blocks/address.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/product-card.scss";
+@import "./blocks/sub-product.scss";
+@import "./blocks/sub-products.scss";
+@import "./blocks/news.scss";
+@import "./blocks/subscribe-form.scss";
+@import "./blocks/main-footer.scss";

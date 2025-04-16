@@ -1,0 +1,20 @@
+.product-card {
+  @include font-setting-short(12px, 400, 16px);
+  @include font-adaptive($tablet-width, 16px, 400, 20px);
+  @include background-adaptive($tablet-width, linear-gradient($light-color 16%, $background-default-color 16%));
+}
+
+.product-card--more {
+  @include font-adaptive($tablet-width, 16px, 400, 18px);
+  background: $light-color;
+}
+
+.product-card--more .product-card__title {
+  color: $title-special-color;
+}
+
+.product-card__title {
+  @include font-setting($secondary-font, 16px, 400, 20px, $title-default-color);
+  @include font-adaptive($tablet-width, 20px, 400, 24px);
+  text-transform: uppercase;
+}

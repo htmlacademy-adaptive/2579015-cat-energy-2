@@ -1,0 +1,10 @@
+.basic-title {
+  @include font-setting($secondary-font, 36px, 400, 36px, $dark-color);
+  @include font-adaptive($tablet-width, 60px, 400, 60px);
+}
+
+.basic-title--accent {
+  @media (max-width: $mobile-width) {
+    line-height: 40px;
+  }
+}

@@ -1,0 +1,27 @@
+.hero {
+  @include background-adaptive($desktop-width, linear-gradient(to right, $light-color 50%, $accent-color 50%));
+
+  @media (max-width: $mobile-width) {
+    background-image: linear-gradient($accent-color 63%, $light-color 63%);
+  }
+}
+
+.hero__title {
+  @media (max-width: $mobile-width) {
+    color: $light-color;
+  }
+}
+
+.hero__text {
+  @include font-setting($secondary-font, 14px, 400, 14px, $dark-color);
+  @include font-adaptive($tablet-width, 20px, 400, 20px);
+  text-transform: uppercase;
+
+  @media (max-width: $mobile-width) {
+    color: $light-color;
+  }
+}
+
+.hero__button {
+  @include font-adaptive($tablet-width, 20px, 400, 26px);
+}

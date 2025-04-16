@@ -1,0 +1,4 @@
+.news__text {
+  @include font-setting($secondary-font, 16px, 400, 24px, $dark-color);
+  @include font-adaptive($tablet-width, 24px, 400, 32px);
+}
