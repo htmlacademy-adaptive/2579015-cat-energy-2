@@ -17,7 +17,7 @@
   <header class="main-header">
     <div class="main-header__container page-container">
       <div class="main-header__logo-container">
-        <a class="main-header__logo-image logo" href="index.html">
+        <a class="main-header__logo-image logo reset-link" href="index.html">
           <picture>
             <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo_desktop.svg">
             <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo_tablet.svg">
@@ -57,143 +57,171 @@
         <h2 class="visually-hidden">Товары</h2>
         <ul class="catalog-products__list reset-list">
           <li class="catalog-products__item product-card">
-            <a class="product-card__link" href="#">
-              <picture>
-                <source width="161" height="172" type="image/png" media="(min-width: 768px)" srcset="images/products/card_chicken500_tablet@1x.png 1x, images/products/card_chicken500_tablet@2x.png 2x">
-                <img class="product-card__image" src="images/products/card_chicken500_mobile@1x.png" srcset="images/products/card_chicken500_mobile@2x.png 2x" width="68" height="86" alt="Продукт Кэт энерджи с курицей 500г">
-              </picture>
-            </a>
-            <a class="product-card__link-title reset-link" href="#">
-              <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
-            </a>
-            <dl class="product-card__records">
-              <dt class="product-card__records-desc">Масса</dt>
-              <dd class="product-card__records-value">500 г</dd>
-              <dt class="product-card__records-desc">Вкус</dt>
-              <dd class="product-card__records-value">Курица</dd>
-              <dt class="product-card__records-desc">Цена</dt>
-              <dd class="product-card__records-value">700 ₽</dd>
-            </dl>
+            <div class="product-card__image-container">
+              <a class="product-card__link" href="#">
+                <picture>
+                  <source width="161" height="172" type="image/png" media="(min-width: 768px)" srcset="images/products/card_chicken500_tablet@1x.png 1x, images/products/card_chicken500_tablet@2x.png 2x">
+                  <img class="product-card__image" src="images/products/card_chicken500_mobile@1x.png" srcset="images/products/card_chicken500_mobile@2x.png 2x" width="68" height="86" alt="Продукт Кэт энерджи с курицей 500г">
+                </picture>
+              </a>
+            </div>
+            <div class="product-card__content">
+              <a class="product-card__link-title reset-link" href="#">
+                <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
+              </a>
+              <dl class="product-card__records">
+                <dt class="product-card__records-desc">Масса</dt>
+                <dd class="product-card__records-value">500 г</dd>
+                <dt class="product-card__records-desc">Вкус</dt>
+                <dd class="product-card__records-value">Курица</dd>
+                <dt class="product-card__records-desc">Цена</dt>
+                <dd class="product-card__records-value">700 ₽</dd>
+              </dl>
+            </div>
             <a class="product-card__button button reset-link" href="#">Заказать</a>
           </li>
           <li class="catalog-products__item product-card">
-            <a class="product-card__link" href="#">
-              <picture>
-                <source width="168" height="206" type="image/png" media="(min-width: 768px)" srcset="images/products/card_chicken1000_tablet@1x.png 1x, images/products/card_chicken1000_tablet@2x.png 2x">
-                <img class="product-card__image" src="images/products/card_chicken500_mobile@1x.png" srcset="images/products/card_chicken1000_mobile@2x.png 2x" width="84" height="100" alt="Продукт Кэт энерджи с курицей 1000г">
-              </picture>
-            </a>
-            <a class="product-card__link-title reset-link" href="#">
-              <h3 class="product-card__title">Cat Energy PRO 1000 г</h3>
-            </a>
-            <dl class="product-card__records">
-              <dt class="product-card__records-desc">Масса</dt>
-              <dd class="product-card__records-value">1000 г</dd>
-              <dt class="product-card__records-desc">Вкус</dt>
-              <dd class="product-card__records-value">Курица</dd>
-              <dt class="product-card__records-desc">Цена</dt>
-              <dd class="product-card__records-value">1000 ₽</dd>
-            </dl>
+            <div class="product-card__image-container">
+              <a class="product-card__link" href="#">
+                <picture>
+                  <source width="168" height="206" type="image/png" media="(min-width: 768px)" srcset="images/products/card_chicken1000_tablet@1x.png 1x, images/products/card_chicken1000_tablet@2x.png 2x">
+                  <img class="product-card__image" src="images/products/card_chicken500_mobile@1x.png" srcset="images/products/card_chicken1000_mobile@2x.png 2x" width="84" height="100" alt="Продукт Кэт энерджи с курицей 1000г">
+                </picture>
+              </a>
+            </div>
+            <div class="product-card__content">
+              <a class="product-card__link-title reset-link" href="#">
+                <h3 class="product-card__title">Cat Energy PRO 1000 г</h3>
+              </a>
+              <dl class="product-card__records">
+                <dt class="product-card__records-desc">Масса</dt>
+                <dd class="product-card__records-value">1000 г</dd>
+                <dt class="product-card__records-desc">Вкус</dt>
+                <dd class="product-card__records-value">Курица</dd>
+                <dt class="product-card__records-desc">Цена</dt>
+                <dd class="product-card__records-value">1000 ₽</dd>
+              </dl>
+            </div>
             <a class="product-card__button button reset-link" href="#">Заказать</a>
           </li>
           <li class="catalog-products__item product-card">
-            <a class="product-card__link" href="#">
-              <picture>
-                <source width="163" height="174" type="image/png" media="(min-width: 768px)" srcset="images/products/card_fish500_tablet@1x.png 1x, images/products/card_fish500_tablet@2x.png 2x">
-                <img class="product-card__image" src="images/products/card_fish500_mobile@1x.png" srcset="images/products/card_fish500_mobile@2x.png 2x" width="68" height="78" alt="Продукт Кэт энерджи с рыбой 500г">
-              </picture>
-            </a>
-            <a class="product-card__link-title reset-link" href="#">
-              <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
-            </a>
-            <dl class="product-card__records">
-              <dt class="product-card__records-desc">Масса</dt>
-              <dd class="product-card__records-value">500 г</dd>
-              <dt class="product-card__records-desc">Вкус</dt>
-              <dd class="product-card__records-value">Рыба</dd>
-              <dt class="product-card__records-desc">Цена</dt>
-              <dd class="product-card__records-value">700 ₽</dd>
-            </dl>
+            <div class="product-card__image-container">
+              <a class="product-card__link" href="#">
+                <picture>
+                  <source width="163" height="174" type="image/png" media="(min-width: 768px)" srcset="images/products/card_fish500_tablet@1x.png 1x, images/products/card_fish500_tablet@2x.png 2x">
+                  <img class="product-card__image" src="images/products/card_fish500_mobile@1x.png" srcset="images/products/card_fish500_mobile@2x.png 2x" width="68" height="78" alt="Продукт Кэт энерджи с рыбой 500г">
+                </picture>
+              </a>
+            </div>
+            <div class="product-card__content">
+              <a class="product-card__link-title reset-link" href="#">
+                <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
+              </a>
+              <dl class="product-card__records">
+                <dt class="product-card__records-desc">Масса</dt>
+                <dd class="product-card__records-value">500 г</dd>
+                <dt class="product-card__records-desc">Вкус</dt>
+                <dd class="product-card__records-value">Рыба</dd>
+                <dt class="product-card__records-desc">Цена</dt>
+                <dd class="product-card__records-value">700 ₽</dd>
+              </dl>
+            </div>
             <a class="product-card__button button reset-link" href="#">Заказать</a>
           </li>
           <li class="catalog-products__item product-card">
-            <a class="product-card__link" href="#">
-              <picture>
-                <source width="168" height="200" type="image/png" media="(min-width: 768px)" srcset="images/products/card_fish1000_tablet@1x.png 1x, images/products/card_fish1000_tablet@2x.png 2x">
-                <img class="product-card__image" src="images/products/card_fish1000_mobile@1x.png" srcset="images/products/card_fish1000_mobile@2x.png 2x" width="84" height="100" alt="Продукт Кэт энерджи с рыбой 1000г">
-              </picture>
-            </a>
-            <a class="product-card__link-title reset-link" href="#">
-              <h3 class="product-card__title">Cat Energy PRO 1000 г</h3>
-            </a>
-            <dl class="product-card__records">
-              <dt class="product-card__records-desc">Масса</dt>
-              <dd class="product-card__records-value">1000 г</dd>
-              <dt class="product-card__records-desc">Вкус</dt>
-              <dd class="product-card__records-value">Рыба</dd>
-              <dt class="product-card__records-desc">Цена</dt>
-              <dd class="product-card__records-value">1000 ₽</dd>
-            </dl>
+            <div class="product-card__image-container">
+              <a class="product-card__link" href="#">
+                <picture>
+                  <source width="168" height="200" type="image/png" media="(min-width: 768px)" srcset="images/products/card_fish1000_tablet@1x.png 1x, images/products/card_fish1000_tablet@2x.png 2x">
+                  <img class="product-card__image" src="images/products/card_fish1000_mobile@1x.png" srcset="images/products/card_fish1000_mobile@2x.png 2x" width="84" height="100" alt="Продукт Кэт энерджи с рыбой 1000г">
+                </picture>
+              </a>
+            </div>
+            <div class="product-card__content">
+              <a class="product-card__link-title reset-link" href="#">
+                <h3 class="product-card__title">Cat Energy PRO 1000 г</h3>
+              </a>
+              <dl class="product-card__records">
+                <dt class="product-card__records-desc">Масса</dt>
+                <dd class="product-card__records-value">1000 г</dd>
+                <dt class="product-card__records-desc">Вкус</dt>
+                <dd class="product-card__records-value">Рыба</dd>
+                <dt class="product-card__records-desc">Цена</dt>
+                <dd class="product-card__records-value">1000 ₽</dd>
+              </dl>
+            </div>
             <a class="product-card__button button reset-link" href="#">Заказать</a>
           </li>
           <li class="catalog-products__item product-card">
-            <a class="product-card__link" href="#">
-              <picture>
-                <source width="161" height="171" type="image/png" media="(min-width: 768px)" srcset="images/products/card_buckwheat500_tablet@1x.png 1x, images/products/card_buckwheat500_tablet@2x.png 2x">
-                <img class="product-card__image" src="images/products/card_buckwheat500_mobile@1x.png" srcset="images/products/card_buckwheat500_mobile@2x.png 2x" width="68" height="78" alt="Продукт Кэт энерджи с гречкой 500г">
-              </picture>
-            </a>
-            <a class="product-card__link-title reset-link" href="#">
-              <h3 class="product-card__title">Cat Energy slim 500 г</h3>
-            </a>
-            <dl class="product-card__records">
-              <dt class="product-card__records-desc">Масса</dt>
-              <dd class="product-card__records-value">500 г</dd>
-              <dt class="product-card__records-desc">Вкус</dt>
-              <dd class="product-card__records-value">Гречка</dd>
-              <dt class="product-card__records-desc">Цена</dt>
-              <dd class="product-card__records-value">400 ₽</dd>
-            </dl>
+            <div class="product-card__image-container">
+              <a class="product-card__link" href="#">
+                <picture>
+                  <source width="161" height="171" type="image/png" media="(min-width: 768px)" srcset="images/products/card_buckwheat500_tablet@1x.png 1x, images/products/card_buckwheat500_tablet@2x.png 2x">
+                  <img class="product-card__image" src="images/products/card_buckwheat500_mobile@1x.png" srcset="images/products/card_buckwheat500_mobile@2x.png 2x" width="68" height="78" alt="Продукт Кэт энерджи с гречкой 500г">
+                </picture>
+              </a>
+            </div>
+            <div class="product-card__content">
+              <a class="product-card__link-title reset-link" href="#">
+                <h3 class="product-card__title">Cat Energy slim 500 г</h3>
+              </a>
+              <dl class="product-card__records">
+                <dt class="product-card__records-desc">Масса</dt>
+                <dd class="product-card__records-value">500 г</dd>
+                <dt class="product-card__records-desc">Вкус</dt>
+                <dd class="product-card__records-value">Гречка</dd>
+                <dt class="product-card__records-desc">Цена</dt>
+                <dd class="product-card__records-value">400 ₽</dd>
+              </dl>
+            </div>
             <a class="product-card__button button reset-link" href="#">Заказать</a>
           </li>
           <li class="catalog-products__item product-card">
-            <a class="product-card__link" href="#">
-              <picture>
-                <source width="168" height="200" type="image/png" media="(min-width: 768px)" srcset="images/products/card_buckwheat1000_tablet@1x.png 1x, images/products/card_buckwheat1000_tablet@2x.png 2x">
-                <img class="product-card__image" src="images/products/card_buckwheat1000_mobile@1x.png" srcset="images/products/card_buckwheat1000_mobile@2x.png 2x" width="84" height="100" alt="Продукт Кэт энерджи с гречкой 1000г">
-              </picture>
-            </a>
-            <a class="product-card__link-title reset-link" href="#">
-              <h3 class="product-card__title">Cat Energy slim 1000 г</h3>
-            </a>
-            <dl class="product-card__records">
-              <dt class="product-card__records-desc">Масса</dt>
-              <dd class="product-card__records-value">1000 г</dd>
-              <dt class="product-card__records-desc">Вкус</dt>
-              <dd class="product-card__records-value">Гречка</dd>
-              <dt class="product-card__records-desc">Цена</dt>
-              <dd class="product-card__records-value">700 ₽</dd>
-            </dl>
+            <div class="product-card__image-container">
+              <a class="product-card__link" href="#">
+                <picture>
+                  <source width="168" height="200" type="image/png" media="(min-width: 768px)" srcset="images/products/card_buckwheat1000_tablet@1x.png 1x, images/products/card_buckwheat1000_tablet@2x.png 2x">
+                  <img class="product-card__image" src="images/products/card_buckwheat1000_mobile@1x.png" srcset="images/products/card_buckwheat1000_mobile@2x.png 2x" width="84" height="100" alt="Продукт Кэт энерджи с гречкой 1000г">
+                </picture>
+              </a>
+            </div>
+            <div class="product-card__content">
+              <a class="product-card__link-title reset-link" href="#">
+                <h3 class="product-card__title">Cat Energy slim 1000 г</h3>
+              </a>
+              <dl class="product-card__records">
+                <dt class="product-card__records-desc">Масса</dt>
+                <dd class="product-card__records-value">1000 г</dd>
+                <dt class="product-card__records-desc">Вкус</dt>
+                <dd class="product-card__records-value">Гречка</dd>
+                <dt class="product-card__records-desc">Цена</dt>
+                <dd class="product-card__records-value">700 ₽</dd>
+              </dl>
+            </div>
             <a class="product-card__button button reset-link" href="#">Заказать</a>
           </li>
           <li class="catalog-products__item product-card">
-            <a class="product-card__link" href="#">
-              <picture>
-                <source width="163" height="174" type="image/png" media="(min-width: 768px)" srcset="images/products/card_rice500_tablet@1x.png 1x, images/products/card_rice500_tablet@2x.png 2x">
-                <img class="product-card__image" src="images/products/card_rice500_mobile@1x.png" srcset="images/products/card_rice500_mobile@2x.png 2x" width="72" height="84" alt="Продукт Кэт энерджи с рисом 500г">
-              </picture>
-            </a>
-            <a class="product-card__link-title reset-link" href="#">
-              <h3 class="product-card__title">Cat Energy SLIM 500 г</h3>
-            </a>
-            <dl class="product-card__records">
-              <dt class="product-card__records-desc">Масса</dt>
-              <dd class="product-card__records-value">500 г</dd>
-              <dt class="product-card__records-desc">Вкус</dt>
-              <dd class="product-card__records-value">Рис</dd>
-              <dt class="product-card__records-desc">Цена</dt>
-              <dd class="product-card__records-value">500 ₽</dd>
-            </dl>
+            <div class="product-card__image-container">
+              <a class="product-card__link" href="#">
+                <picture>
+                  <source width="163" height="174" type="image/png" media="(min-width: 768px)" srcset="images/products/card_rice500_tablet@1x.png 1x, images/products/card_rice500_tablet@2x.png 2x">
+                  <img class="product-card__image" src="images/products/card_rice500_mobile@1x.png" srcset="images/products/card_rice500_mobile@2x.png 2x" width="72" height="84" alt="Продукт Кэт энерджи с рисом 500г">
+                </picture>
+              </a>
+            </div>
+            <div class="product-card__content">
+              <a class="product-card__link-title reset-link" href="#">
+                <h3 class="product-card__title">Cat Energy SLIM 500 г</h3>
+              </a>
+              <dl class="product-card__records">
+                <dt class="product-card__records-desc">Масса</dt>
+                <dd class="product-card__records-value">500 г</dd>
+                <dt class="product-card__records-desc">Вкус</dt>
+                <dd class="product-card__records-value">Рис</dd>
+                <dt class="product-card__records-desc">Цена</dt>
+                <dd class="product-card__records-value">500 ₽</dd>
+              </dl>
+            </div>
             <a class="product-card__button button reset-link" href="#">Заказать</a>
           </li>
           <li class="catalog-products__item product-card product-card--more">
@@ -209,40 +237,52 @@
     <section class="sub-products">
       <div class="sub-products__container page-container">
         <h2 class="sub-products__title secondary-title">Дополнительные товары</h2>
-        <ul class="sub-products__list reset-list">
-          <li class="sub-products__item sub-product">
-            <a class="sub-product__link reset-link" href="#">
-              <h3 class="sub-product__title">Сахарозаменитель</h3>
-            </a>
-            <p class="sub-product__text">1 упаковка (100 г)</p>
-            <p class="sub-product__text">200 ₽</p>
-            <a class="sub-product__button button reset-link" href="#">Заказать</a>
-          </li>
-          <li class="sub-products__item sub-product">
-            <h3 class="sub-product__title">Питьевая вода</h3>
-            <p class="sub-product__text">5 литров</p>
-            <p class="sub-product__text">50 ₽</p>
-            <a class="sub-product__button button reset-link" href="#">Заказать</a>
-          </li>
-          <li class="sub-products__item sub-product">
-            <a class="sub-product__link reset-link" href="#">
-              <h3 class="sub-product__title">Молоко</h3>
-            </a>
-            <p class="sub-product__text">1 литр</p>
-            <p class="sub-product__text">100 ₽</p>
-            <a class="sub-product__button button reset-link" href="#">Заказать</a>
-          </li>
-          <li class="sub-products__item sub-product">
-            <a class="sub-product__link reset-link" href="#">
-              <h3 class="sub-product__title">Витамины</h3>
-            </a>
-            <p class="sub-product__text">1 упаковка (30 г)</p>
-            <p class="sub-product__text">300 ₽</p>
-            <a class="sub-product__button button reset-link" href="#">Заказать</a>
-          </li>
-        </ul>
-        <div class="sub-products__promo">
-          <p class="sub-products__promo-text">Закажите все и получите чехол для кота в подарок!</p>
+        <div class="sub-products__content">
+          <ul class="sub-products__list reset-list">
+            <li class="sub-products__item sub-product">
+              <a class="sub-product__link reset-link" href="#">
+                <h3 class="sub-product__title">Сахарозаменитель</h3>
+              </a>
+              <div class="sub-product__text-container">
+                <span class="sub-product__text">1 упаковка (100 г)</span>
+                <span class="sub-product__text">200 ₽</span>
+              </div>
+              <a class="sub-product__button button reset-link" href="#">Заказать</a>
+            </li>
+            <li class="sub-products__item sub-product">
+              <a class="sub-product__link reset-link" href="#">
+                <h3 class="sub-product__title">Питьевая вода</h3>
+              </a>
+              <div class="sub-product__text-container">
+                <span class="sub-product__text">5 литров</span>
+                <span class="sub-product__text">50 ₽</span>
+              </div>
+              <a class="sub-product__button button reset-link" href="#">Заказать</a>
+            </li>
+            <li class="sub-products__item sub-product">
+              <a class="sub-product__link reset-link" href="#">
+                <h3 class="sub-product__title">Молоко</h3>
+              </a>
+              <div class="sub-product__text-container">
+                <span class="sub-product__text">1 литр</span>
+                <span class="sub-product__text">100 ₽</span>
+              </div>
+              <a class="sub-product__button button reset-link" href="#">Заказать</a>
+            </li>
+            <li class="sub-products__item sub-product">
+              <a class="sub-product__link reset-link" href="#">
+                <h3 class="sub-product__title">Витамины</h3>
+              </a>
+              <div class="sub-product__text-container">
+                <span class="sub-product__text">1 упаковка (30 г)</span>
+                <span class="sub-product__text">300 ₽</span>
+              </div>
+              <a class="sub-product__button button reset-link" href="#">Заказать</a>
+            </li>
+          </ul>
+          <div class="sub-products__promo">
+            <p class="sub-products__promo-text">Закажите все и получите чехол для кота в подарок!</p>
+          </div>
         </div>
       </div>
     </section>
@@ -257,7 +297,7 @@
         </form>
       </div>
     </section>
-    <section class="invite">
+    <section class="invite invite--special">
       <div class="invite__container page-container">
         <h2 class="invite__title">Приглашаем к сотрудничеству дилеров!</h2>
         <address class="invite__contacts address">

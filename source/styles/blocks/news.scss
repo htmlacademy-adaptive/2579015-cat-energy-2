@@ -1,4 +1,19 @@
+.news__container {
+  @include padding-adaptive($tablet-width, 80px 68px);
+  @include padding-adaptive($desktop-width, 96px $padding-desktop 104px);
+  padding: 40px $padding-mobile;
+}
+
+.news__title {
+  @include margin-adaptive($tablet-width, 0 0 66px 0);
+  @include margin-adaptive($desktop-width, 0 0 72px 0);
+  margin: 0 0 32px;
+}
+
 .news__text {
   @include font-setting($secondary-font, 16px, 400, 24px, $dark-color);
   @include font-adaptive($tablet-width, 24px, 400, 32px);
+  @include padding-adaptive($tablet-width, 0 50px);
+  margin: 0 0 24px;
+  text-align: center;
 }

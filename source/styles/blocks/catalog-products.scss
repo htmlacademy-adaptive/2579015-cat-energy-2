@@ -1,0 +1,20 @@
+.catalog-products__container {
+  @include padding-adaptive($tablet-width, 40px $padding-tablet 74px);
+  @include padding-adaptive($desktop-width, 74px $padding-desktop 71px);
+  padding: 27px $padding-mobile 25px;
+}
+
+.catalog-products__title {
+  @include margin-adaptive($tablet-width, 0 0 84px 0);
+  margin: 0 0 41px;
+}
+
+.catalog-products__list {
+  @include grid-adaptive($tablet-width, 1fr 1fr, 60px);
+  @include grid-adaptive($desktop-width, 245px 245px 245px 245px, 63px 80px);
+}
+
+.catalog-products__item {
+  @include padding-adaptive($tablet-width, 10px 37px 40px);
+  padding: 20px 0 25px;
+}

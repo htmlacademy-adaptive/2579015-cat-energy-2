@@ -1,8 +1,10 @@
 .button {
   @include font-setting($secondary-font, 16px, 400, 20px, $light-color);
   display: inline-block;
+  padding: 10px;
   text-align: center;
   text-transform: uppercase;
   background-color: $accent-color;
+  cursor: pointer;
   border: none;
 }

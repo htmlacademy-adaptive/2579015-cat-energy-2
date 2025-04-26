@@ -1,5 +1,18 @@
+.invite--special {
+  @include background-adaptive($desktop-width, $light-color);
+  background-color: $background-default-color;
+}
+
+.invite__container {
+  @include flex-setting(row, space-between, center, 0, nowrap);
+  @include padding-adaptive($tablet-width, 60px 70px);
+  @include padding-adaptive($desktop-width, 60px 80px);
+  padding: 26px $padding-mobile;
+}
+
 .invite__title {
   @include font-setting($secondary-font, 16px, 400, 20px, $title-special-color);
   @include font-adaptive($tablet-width, 20px, 400, 26px);
+  margin: 0;
   text-transform: uppercase;
 }

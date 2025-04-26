@@ -1,20 +1,87 @@
 .example {
-  @include background-adaptive($tablet-width, linear-gradient($light-color 43%, $background-dark-color 43%));
+  @include background-adaptive($tablet-width, linear-gradient($light-color 57%, $background-dark-color 57%));
   @include background-adaptive($desktop-width, linear-gradient($light-color 23%, $background-dark-color 23%));
   background-color: $background-dark-color;
+}
+
+.example__container {
+  @include padding-adaptive($tablet-width, 45px $padding-tablet 101px);
+  @include padding-adaptive($desktop-width, 0 $padding-desktop 75px);
+  @include grid-adaptive($desktop-width, 1fr 1fr, 224px);
+  padding: 25px $padding-mobile 40px;
+}
+
+.example__title {
+  @include margin-adaptive($tablet-width, 0 0 60px);
+  @include margin-adaptive($desktop-width, 0 0 146px 0);
+  margin: 0 0 40px;
+}
+
+.example__desc {
+  @include margin-adaptive($tablet-width, 0 0 55px);
+  @include margin-adaptive($desktop-width, 0 0 69px);
+  margin: 0 0 20px;
+}
+
+.example__data-container {
+  @include flex-setting(column, space-between, center, 34px, wrap);
+  @include flex-adaptive($tablet-width, row, space-between, center, 100px, nowrap);
+  @include flex-adaptive($desktop-width, column, center, flex-start, 55px, wrap);
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1;
+  }
+}
+
+.example__data-list {
+  @include grid-setting(1fr 1fr, 32px);
+  @include grid-adaptive($tablet-width, 162px 162px, 42px);
+  text-align: center;
+}
+
+.example__data-item {
+  position: relative;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  padding: 14px 20px;
 }
 
 .example__data-desc {
   @include font-setting-short(12px, 400, 12px);
   @include font-adaptive($tablet-width, 14px, 400, 14px);
+  @include background-adaptive($tablet-width, $light-color);
+  @include background-adaptive($desktop-width, $background-dark-color);
+  @include padding-adaptive($tablet-width, 0 5px 0);
+  position: absolute;
+  padding: 0 16px;
+  left: 50%;
+  bottom: -14px;
+  transform: translateX(-50%);
+  background-color: $background-dark-color;
 }
 
 .example__data-value {
   @include font-setting($secondary-font, 24px, 400, 24px, $dark-color);
   @include font-adaptive($tablet-width, 30px, 400, 37px);
+  display: inline-block;
 }
 
-.example__data-text {
+.example__text-container {
+  @include flex-adaptive($tablet-width, column, flex-end, flex-end, 9px, wrap);
+  @include flex-adaptive($desktop-width, row, flex-start, center, 63px, wrap);
+}
+
+.example__text {
   @include font-setting($secondary-font, 14px, 400, 20px, $dark-color);
   @include font-adaptive($tablet-width, 20px, 400, 20px);
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.example__slider-container {
+  @media (min-width: $desktop-width) {
+    grid-column: 2;
+    grid-row: 1/4;
+  }
 }

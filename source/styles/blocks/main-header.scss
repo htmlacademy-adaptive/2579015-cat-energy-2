@@ -1,4 +1,31 @@
+.main-header__container {
+  @include flex-setting(row, space-between, center, 65px, nowrap);
+  @include padding-adaptive($tablet-width, 25px $padding-tablet);
+  @include padding-adaptive($desktop-width, 55px $padding-desktop 0);
+  padding: 13px $padding-mobile;
+}
+
 .main-header--accent {
   @include background-adaptive($desktop-width, linear-gradient(to right, $light-color 50%, $accent-color 50%));
-  color: $light-color;
+}
+
+.main-header--accent .site-list__link {
+  @media (min-width: $desktop-width) {
+    color: $light-color;
+    background-color: transparent;
+  }
+}
+
+.main-header--accent .site-list__item--current::after {
+  @media (min-width: $desktop-width) {
+    background-color: $light-color;
+  }
+}
+
+.main-header__logo-container {
+  @include flex-setting(row, space-between, center, 56px, nowrap);
+
+  @media (min-width: $tablet-width) {
+    gap: 13px;
+  }
 }

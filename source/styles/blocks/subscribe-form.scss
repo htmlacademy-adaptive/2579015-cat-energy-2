@@ -1,8 +1,18 @@
-.subscribe-form__control::placeholder {
+.subscribe-form {
+  @include flex-setting(column, center, stretch, 16px, nowrap);
+  @include grid-adaptive($tablet-width, 376px 256px, 0);
+  @include grid-adaptive($desktop-width, 496px 256px, 0);
+}
+
+.subscribe-form__control {
   @include font-setting($secondary-font, 20px, 400, 30px, $basic-color);
   text-transform: uppercase;
+  padding: 13px;
+  border: 1px solid $border-color;
+  border-radius: 0;
 }
 
 .subscribe-form__button {
   @include font-setting-short(20px, 400, 26px);
+  padding: 15px;
 }

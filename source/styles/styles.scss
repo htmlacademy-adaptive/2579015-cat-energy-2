@@ -14,17 +14,26 @@
 @import "./blocks/button.scss";
 @import "./blocks/page-container.scss";
 /* Секционные стили */
+@import "./blocks/page.scss";
 @import "./blocks/main-header.scss";
+@import "./blocks/main-nav.scss";
 @import "./blocks/site-list.scss";
+@import "./blocks/main-index.scss";
+@import "./blocks/main-catalog.scss";
 @import "./blocks/hero.scss";
+@import "./blocks/programs.scss";
 @import "./blocks/program.scss";
+@import "./blocks/benefits.scss";
+@import "./blocks/benefit.scss";
 @import "./blocks/example.scss";
 @import "./blocks/invite.scss";
 @import "./blocks/address.scss";
 @import "./blocks/copyright.scss";
 @import "./blocks/product-card.scss";
+@import "./blocks/catalog-products.scss";
 @import "./blocks/sub-product.scss";
 @import "./blocks/sub-products.scss";
 @import "./blocks/news.scss";
 @import "./blocks/subscribe-form.scss";
 @import "./blocks/main-footer.scss";
+@import "./blocks/social-list.scss";

@@ -1,0 +1,17 @@
+.benefits__container {
+  @include padding-adaptive($tablet-width, 0 $padding-tablet 47px);
+  @include padding-adaptive($desktop-width, 0 $padding-desktop 69px);
+  padding: 0 $padding-mobile 49px;
+}
+
+.benefits__title {
+  @include margin-adaptive($tablet-width, 0 0 72px);
+  margin: 0 0 40px;
+}
+
+.benefits__list {
+  @include flex-setting(column, space-between, start, 20px, nowrap);
+  @include grid-adaptive($tablet-width, 1fr 1fr, 80px 150px);
+  @include grid-adaptive($desktop-width, 1fr 1fr 1fr 1fr, 40px 75px);
+  counter-reset: benefit 0;
+}

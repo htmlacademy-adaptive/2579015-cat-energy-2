@@ -1,6 +1,7 @@
 .basic-title {
   @include font-setting($secondary-font, 36px, 400, 36px, $dark-color);
   @include font-adaptive($tablet-width, 60px, 400, 60px);
+  margin: 0;
 }
 
 .basic-title--accent {

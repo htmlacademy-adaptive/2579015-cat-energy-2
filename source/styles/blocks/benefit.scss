@@ -1,0 +1,51 @@
+.benefit {
+  @include grid-setting(60px 1fr, 20px);
+  @include grid-adaptive($tablet-width, 250px, 30px);
+  position: relative;
+  counter-increment: benefit 1;
+}
+
+.benefit::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: $accent-color;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.benefit::after {
+  @media (min-width: $tablet-width) {
+    @include font-setting($secondary-font, 280px, 400, 280px, $background-default-color);
+    content: counter(benefit);
+    position: absolute;
+    z-index: -1;
+    top: -40px;
+    right: 0;
+    bottom: -57px;
+  }
+}
+
+.benefit--healthy.benefit::before {
+  @include background-image-setting(url("../../icons/stack.svg#icon_leaf"), 30px 32px, center, no-repeat);
+}
+
+.benefit--easy.benefit::before {
+  @include background-image-setting(url("../../icons/stack.svg#icon_water"), 26px 29px, center, no-repeat);
+}
+
+.benefit--regularly.benefit::before {
+  @include background-image-setting(url("../../icons/stack.svg#icon_eat"), 25px 30px, center, no-repeat);
+}
+
+.benefit--fast.benefit::before {
+  @include background-image-setting(url("../../icons/stack.svg#icon_timer"), 26px 32px, center, no-repeat);
+}
+
+.benefit__desc {
+  margin: 0;
+}

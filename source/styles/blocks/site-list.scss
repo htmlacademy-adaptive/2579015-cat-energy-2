@@ -1,6 +1,39 @@
+.site-list {
+  @include flex-adaptive($tablet-width, row, flex-end, center, 0, wrap);
+  width: 100%;
+}
+
+.site-list__item {
+  position: relative;
+}
+
 .site-list__link {
   @include font-setting($secondary-font, 20px, 400, 20px, $dark-color);
   @include font-adaptive($tablet-width, 18px, 400, 24px);
   @include font-adaptive($desktop-width, 20px, 400, 30px);
+  @include padding-adaptive($tablet-width, 14px 16px 12px);
+  @include padding-adaptive($desktop-width, 16px 16px 13px);
+  display: block;
+  padding: 22px 16px 24px;
+  background-color: $light-color;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.site-list__item:last-child .site-list__link {
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+  }
+}
+
+.site-list__item--current::after {
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    height: 2px;
+    background-color: $accent-color;
+  }
 }

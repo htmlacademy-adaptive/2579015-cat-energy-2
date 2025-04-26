@@ -1,10 +1,37 @@
+.sub-product {
+  @include flex-setting(column, space-between, stretch, 13px, nowrap);
+  @include grid-adaptive($tablet-width, 1fr 1fr, 25px 100px);
+  @include grid-adaptive($desktop-width, 1fr 285px 244px, 50px);
+}
+
+.sub-product__text-container {
+  @include flex-setting(row, space-between, center, 20px, nowrap);
+  @include flex-adaptive($tablet-width, row, flex-end, center, 50px, nowrap);
+  @include flex-adaptive($desktop-width, row, space-between, center, 20px, nowrap);
+}
+
 .sub-product__text {
   @include font-setting-short(14px, 400, 14px);
   @include font-adaptive($tablet-width, 16px, 400, 20px);
 }
 
+.sub-product__link {
+  @include flex-setting(row, flex-start, center, 0, nowrap);
+}
+
 .sub-product__title {
   @include font-setting($secondary-font, 16px, 400, 16px, $title-default-color);
   @include font-adaptive($tablet-width, 20px, 400, 20px);
+  margin: 0;
   text-transform: uppercase;
+}
+
+.sub-product__button {
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3;
+  }
 }

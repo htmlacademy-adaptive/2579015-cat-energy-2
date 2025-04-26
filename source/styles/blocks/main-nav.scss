@@ -1,0 +1,31 @@
+.main-nav {
+  @media (min-width: $tablet-width) {
+    max-width: 452px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 491px;
+  }
+}
+
+.main-nav__toggle {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &:active + .main-nav__list {
+    display: block;
+  }
+}
+
+.main-nav__list {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  top: 66px;
+  left: 0;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+  }
+}

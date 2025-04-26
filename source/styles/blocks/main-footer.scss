@@ -1,3 +1,21 @@
 .main-footer {
   background-color: $background-default-color;
 }
+
+.main-footer__container {
+  @include flex-setting(column, space-between, center, 40px, nowrap);
+  @include flex-adaptive($tablet-width, row, space-between, center, 40px, nowrap);
+  @include padding-adaptive($tablet-width, 55px $padding-tablet);
+  @include padding-adaptive($desktop-width, 66px $padding-desktop);
+  padding: 40px $padding-mobile;
+}
+
+.main-footer__socials {
+  max-width: 132px;
+}
+
+.main-footer__copyright {
+  @media (min-width: $tablet-width) {
+    max-width: 168px;
+  }
+}

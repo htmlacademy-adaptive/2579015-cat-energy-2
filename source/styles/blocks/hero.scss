@@ -1,20 +1,49 @@
 .hero {
   @include background-adaptive($desktop-width, linear-gradient(to right, $light-color 50%, $accent-color 50%));
+  text-align: center;
 
   @media (max-width: $mobile-width) {
     background-image: linear-gradient($accent-color 63%, $light-color 63%);
   }
 }
 
+.hero__container {
+  @include flex-setting(column, space-between, stretch, 0, nowrap);
+  @include padding-adaptive($tablet-width, 40px 230px 0 120px);
+  @include padding-adaptive($desktop-width, 0 331px 52px 190px);
+  padding: 27px $padding-mobile 0;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 880px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 580px;
+  }
+}
+
 .hero__title {
+  @include margin-adaptive($tablet-width, 0 0 40px);
+  @include margin-adaptive($desktop-width, 70px 450px 40px 0);
+  margin: 0 0 25px;
+
   @media (max-width: $mobile-width) {
     color: $light-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
   }
 }
 
 .hero__text {
   @include font-setting($secondary-font, 14px, 400, 14px, $dark-color);
   @include font-adaptive($tablet-width, 20px, 400, 20px);
+  @include margin-adaptive($tablet-width, 0 0 50px);
+  margin-bottom: 29px;
   text-transform: uppercase;
 
   @media (max-width: $mobile-width) {
@@ -22,6 +51,21 @@
   }
 }
 
+.hero__image {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 240px;
+    left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 29px;
+    left: 560px;
+  }
+}
+
 .hero__button {
   @include font-adaptive($tablet-width, 20px, 400, 26px);
+  padding: 14px 24px;
+  z-index: 1;
 }

@@ -8,8 +8,14 @@ $title-default-color: #222222;
 $title-special-color: #111111;
 $background-default-color: #f2f2f2;
 $background-dark-color: #eaeaea;
+$border-color: #cdcdcd;
 
 /* Размеры */
-$mobile-width: 425px;
+$mobile-width: 320px;
 $tablet-width: 748px;
 $desktop-width: 1440px;
+
+/* Боковые отступы */
+$padding-mobile: 20px;
+$padding-tablet: 30px;
+$padding-desktop: 110px;
