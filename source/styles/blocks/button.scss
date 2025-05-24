@@ -7,4 +7,13 @@
   background-color: $accent-color;
   cursor: pointer;
   border: none;
+
+  &:hover,
+  &:active {
+    background-color: $accent-special-color;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }

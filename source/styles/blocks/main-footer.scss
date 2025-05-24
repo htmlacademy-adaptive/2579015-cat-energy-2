@@ -3,19 +3,78 @@
 }
 
 .main-footer__container {
-  @include flex-setting(column, space-between, center, 40px, nowrap);
+  @include flex-setting(column, space-between, center, 36px, nowrap);
   @include flex-adaptive($tablet-width, row, space-between, center, 40px, nowrap);
   @include padding-adaptive($tablet-width, 55px $padding-tablet);
   @include padding-adaptive($desktop-width, 66px $padding-desktop);
   padding: 40px $padding-mobile;
+  position: relative;
+
+  @media (max-width: $mobile-width) {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      left: $padding-mobile;
+      right: $padding-mobile;
+      background-color: $border-special-color;
+    }
+
+    &::before {
+      top: 84px;
+    }
+
+    &::after {
+      bottom: 94px;
+    }
+  }
+}
+
+.main-footer__logo {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+
+  &:not(:disabled):hover {
+    opacity: 0.8;
+  }
+
+  &:not(:disabled):active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 .main-footer__socials {
   max-width: 132px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 38px;
+  }
 }
 
 .main-footer__copyright {
   @media (min-width: $tablet-width) {
     max-width: 168px;
   }
+
+  &:not(:disabled):active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
+}
+
+.main-footer__copyright .copyright__author-logo {
+  fill: #666666;
+}
+
+.main-footer__copyright:not(:disabled):hover .copyright__author-logo {
+  fill: $accent-color;
 }

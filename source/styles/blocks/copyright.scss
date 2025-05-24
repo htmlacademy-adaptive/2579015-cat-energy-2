@@ -1,7 +1,7 @@
 .copyright {
   @include flex-setting(row, space-between, center, 23px, nowrap);
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $mobile-width-only) {
     align-self: stretch;
   }
 }

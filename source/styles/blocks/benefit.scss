@@ -25,27 +25,41 @@
     position: absolute;
     z-index: -1;
     top: -40px;
-    right: 0;
+    right: 5px;
     bottom: -57px;
   }
 }
 
-.benefit--healthy.benefit::before {
+.benefit--healthy::after {
+  @media (min-width: $tablet-width) {
+    right: 25px;
+  }
+}
+
+.benefit--healthy::before {
   @include background-image-setting(url("../../icons/stack.svg#icon_leaf"), 30px 32px, center, no-repeat);
 }
 
-.benefit--easy.benefit::before {
+.benefit--easy::before {
   @include background-image-setting(url("../../icons/stack.svg#icon_water"), 26px 29px, center, no-repeat);
 }
 
-.benefit--regularly.benefit::before {
+.benefit--regularly::before {
   @include background-image-setting(url("../../icons/stack.svg#icon_eat"), 25px 30px, center, no-repeat);
 }
 
-.benefit--fast.benefit::before {
+.benefit--fast::before {
   @include background-image-setting(url("../../icons/stack.svg#icon_timer"), 26px 32px, center, no-repeat);
 }
 
 .benefit__desc {
   margin: 0;
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 2px;
+
+    br {
+      display: none;
+    }
+  }
 }

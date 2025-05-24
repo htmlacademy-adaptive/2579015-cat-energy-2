@@ -6,4 +6,18 @@
 .address__city,
 .address__street {
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.address__street {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 19px;
+  }
 }

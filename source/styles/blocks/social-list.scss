@@ -7,6 +7,19 @@
   width: 28px;
   height: 22px;
   background-color: #666666;
+
+  &:not(:disabled):hover,
+  &:not(:disabled):active {
+    background-color: $accent-color;
+  }
+
+  &:not(:disabled):active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
 }
 
 .social-list__link--vk {

@@ -10,7 +10,9 @@
   <link rel="apple-touch-icon" href="favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=5cb297c1-5ade-45cd-bb95-7d4947a8c068&lang=ru_RU" defer></script>
   <script src="scripts/index.js" defer></script>
+  <script src="scripts/slider.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -26,13 +28,13 @@
         </a>
         <a class="main-header__logo-brand logo" href="#">
           <picture>
-            <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/brand_tablet.svg">
-            <source width="101" height="18" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/brand_tablet.svg">
-            <img class="logo__brand" src="images/logo/brand.svg" width="101" height="18" alt="Бренд">
+            <source width="118" height="26" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/brand_tablet.svg">
+            <source width="101" height="21" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/brand_tablet.svg">
+            <img class="logo__brand" src="images/logo/brand.svg" width="101" height="21" alt="Бренд">
           </picture>
         </a>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -56,6 +58,9 @@
         <h1 class="hero__title basic-title">Функциональное питание для котов</h1>
         <p class="hero__text">Занялся собой? Займись котом!</p>
         <picture>
+          <source width="552" height="499" type="image/webp" media="(min-width: 1440px)" srcset="images/hero/cat_energy_desktop@1x.webp 1x, images/hero/cat_energy_desktop@2x.webp 2x">
+          <source width="709" height="609" type="image/webp" media="(min-width: 768px)" srcset="images/hero/cat_energy_tablet@1x.webp 1x, images/hero/cat_energy_tablet@2x.webp 2x">
+          <source width="280" height="270" type="image/webp" srcset="images/hero/cat_energy_mobile@1x.webp 1x, images/hero/cat_energy_mobile@2x.webp 2x">
           <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/hero/cat_energy_desktop@1x.png 1x, images/hero/cat_energy_desktop@2x.png 2x">
           <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/hero/cat_energy_tablet@1x.png 1x, images/hero/cat_energy_tablet@2x.png 2x">
           <img class="hero__image" src="images/hero/cat_energy_mobile@1x.png" srcset="images/hero/cat_energy_mobile@2x.png 2x" width="280" height="270" alt="Продукт Кэт энерджи">
@@ -98,62 +103,83 @@
           </li>
           <li class="benefits__item benefit benefit--fast">
             <p class="benefit__desc">Уже через месяц наслаждайтесь
-              изменениями к лучшему вашего питомца!</p>
+              изменениями к лучшему <br>
+              вашего питомца!</p>
           </li>
         </ol>
       </div>
     </section>
     <section class="example">
       <div class="example__container page-container">
-        <h2 class="example__title basic-title basic-title--accent">Живой пример</h2>
-        <p class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой
-          обычный корм на Cat Energy Slim. Отличный результат
-          без изнуряющих тренировок! При этом он не менял своих
-          привычек и по-прежнему спит по 16 часов в день.</p>
-        <div class="example__data-container">
-          <ul class="example__data-list reset-list">
-            <li class="example__data-item">
-              <span class="example__data-desc">снижение веса</span>
-              <span class="example__data-value">5 КГ</span>
-            </li>
-            <li class="example__data-item">
-              <span class="example__data-desc">затрачено времени</span>
-              <span class="example__data-value">60 ДНЕЙ</span>
-            </li>
-          </ul>
-          <div class="example__text-container">
-            <p class="example__text">Затраты на питание:</p>
-            <p class="example__text">15 000 РУБ.</p>
+        <div class="example__content">
+          <h2 class="example__title basic-title basic-title--accent">Живой пример</h2>
+          <p class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой
+            обычный корм на Cat Energy Slim. Отличный результат<br>
+            без изнуряющих тренировок! При этом он не менял своих
+            привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="example__data-container">
+            <ul class="example__data-list reset-list">
+              <li class="example__data-item">
+                <span class="example__data-desc">снижение веса</span>
+                <span class="example__data-value">5 КГ</span>
+              </li>
+              <li class="example__data-item">
+                <span class="example__data-desc">затрачено времени</span>
+                <span class="example__data-value">60 ДНЕЙ</span>
+              </li>
+            </ul>
+            <div class="example__text-container">
+              <p class="example__text">Затраты на питание:</p>
+              <p class="example__text">15 000 РУБ.</p>
+            </div>
           </div>
         </div>
         <div class="example__slider-container slider">
-          <picture>
-            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/slider/before_tablet@1x.png 1x, images/slider/before_tablet@2x.png 2x">
-            <img class="slider__image-before" src="images/slider/before_mobile@1x.png" srcset="images/slider/before_mobile@2x.png 2x" width="280" height="256" alt="Фото до перехода на питание Кэт энерджи">
-          </picture>
-          <picture>
-            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/slider/after_tablet@1x.png 1x, images/slider/after_tablet@2x.png 2x">
-            <img class="slider__image-after" src="images/slider/after_mobile@1x.png" srcset="images/slider/after_mobile@2x.png 2x" width="280" height="256" alt="Фото после перехода на питание Кэт энерджи">
-          </picture>
-          <button class="slider__button" type="button">
-            <span class="visually-hidden">Передвинуть ползунок</span>
-          </button>
+          <div class="slider__container">
+            <ul class="slider__images reset-list">
+              <li class="slider__image slider__image--before">
+                <picture>
+                  <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/slider/before_tablet@1x.webp 1x, images/slider/before_tablet@2x.webp 2x">
+                  <source width="280" height="256" type="image/webp" srcset="images/slider/before_mobile@1x.webp 1x, images/slider/before_mobile@2x.webp 2x">
+                  <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/slider/before_tablet@1x.png 1x, images/slider/before_tablet@2x.png 2x">
+                  <img class="slider__before" src="images/slider/before_mobile@1x.png" srcset="images/slider/before_mobile@2x.png 2x" width="280" height="256" alt="Фото до перехода на питание Кэт энерджи">
+                </picture>
+              </li>
+              <li class="slider__image slider__image--after">
+                <picture>
+                  <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/slider/after_tablet@1x.webp 1x, images/slider/after_tablet@2x.webp 2x">
+                  <source width="280" height="256" type="image/webp" srcset="images/slider/after_mobile@1x.webp 1x, images/slider/after_mobile@2x.webp 2x">
+                  <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/slider/after_tablet@1x.png 1x, images/slider/after_tablet@2x.png 2x">
+                  <img class="slider__after" src="images/slider/after_mobile@1x.png" srcset="images/slider/after_mobile@2x.png 2x" width="280" height="256" alt="Фото после перехода на питание Кэт энерджи">
+                </picture>
+              </li>
+            </ul>
+
+            <div class="slider__input">
+              <button class="slider__button" type="button">
+                <span class="visually-hidden">Передвинуть ползунок</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="invite">
       <div class="invite__container page-container">
-        <h2 class="invite__title">Приглашаем к сотрудничеству дилеров!</h2>
+        <h2 class="invite__title">Приглашаем<br> к сотрудничеству дилеров!</h2>
         <address class="invite__contacts address">
           <p class="address__street">ул. Большая Конюшенная, д. 19/8</p>
           <p class="address__city">Санкт-Петербург</p>
         </address>
       </div>
+      <div class="map-insert" id="map"></div>
     </section>
   </main>
   <footer class="main-footer">
     <div class="main-footer__container page-container">
-      <img class="main-footer__logo logo" src="images/logo/brand.svg" width="128" height="24" alt="Логотип">
+      <a class="main-footer__logo logo reset-link" href="#">
+        <img class="logo__image" src="images/logo/brand.svg" width="128" height="28" alt="Логотип">
+      </a>
       <ul class="main-footer__socials social-list reset-list">
         <li class="social-list__item">
           <a class="social-list__link social-list__link--vk reset-link" href="https://vk.com/htmlacademy">
@@ -173,7 +199,9 @@
       </ul>
       <a class="main-footer__copyright copyright reset-link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__author">HTML Academy</span>
-        <img class="copyright__author-logo logo" src="images/logo/logo_html.svg" width="27" height="34" alt="Логотип html-академии">
+        <svg class="copyright__author-logo" role="img" xmlns="http://www.w3.org/2000/svg" width="27" height="35" fill="currentColor" viewBox="0 0 27 35">
+          <path d="M13.6.5h-.1L0 1.9v24.6l13.5 8 13.5-8V2L13.6.5Zm11.6 25-11.7 7-11.7-7v-10l11.7 6.8v1.3l-8-4.7V20l8 4.8v1.3l-8-4.8v1.2l8 4.9 8.1-4.9v-5.2l3.6-2.1v10.2Zm0-11.5L22 15.8l-1.5 1-7-4.3v1.2l6 3.6-.2.1-.8.5-5-3v1.3l3.9 2.3-1 .6-3-1.7v1.2l2 1.2-2 1.1-11.6-6.8 11.6-7L25.2 14Zm0-1.3L13.4 5.8l-11.6 7V3.4l11.7-1.2 11.7 1.2v9.2Z" />
+        </svg>
       </a>
     </div>
   </footer>

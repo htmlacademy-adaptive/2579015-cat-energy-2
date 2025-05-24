@@ -1,13 +1,27 @@
+.invite {
+  position: relative;
+}
+
 .invite--special {
   @include background-adaptive($desktop-width, $light-color);
   background-color: $background-default-color;
 }
 
 .invite__container {
-  @include flex-setting(row, space-between, center, 0, nowrap);
+  @include grid-setting(140px 1fr 140px, 0);
+  @include grid-adaptive($tablet-width, 163px 1fr 157px, 0);
   @include padding-adaptive($tablet-width, 60px 70px);
-  @include padding-adaptive($desktop-width, 60px 80px);
+  @include padding-adaptive($desktop-width, 61px 78px);
   padding: 26px $padding-mobile;
+  background-color: $light-color;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    width: 565px;
+    top: 95px;
+    right: calc(50% + 45px);
+    z-index: 1;
+  }
 }
 
 .invite__title {
@@ -15,4 +29,8 @@
   @include font-adaptive($tablet-width, 20px, 400, 26px);
   margin: 0;
   text-transform: uppercase;
+}
+
+.invite__contacts {
+  grid-column: 3;
 }

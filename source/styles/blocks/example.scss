@@ -1,14 +1,28 @@
 .example {
-  @include background-adaptive($tablet-width, linear-gradient($light-color 57%, $background-dark-color 57%));
-  @include background-adaptive($desktop-width, linear-gradient($light-color 23%, $background-dark-color 23%));
+  @include background-adaptive($tablet-width, linear-gradient($light-color 57.3%, $background-dark-color 57.3%));
+  @include background-adaptive($desktop-width, linear-gradient($light-color 30%, $background-dark-color 30%));
   background-color: $background-dark-color;
 }
 
 .example__container {
   @include padding-adaptive($tablet-width, 45px $padding-tablet 101px);
-  @include padding-adaptive($desktop-width, 0 $padding-desktop 75px);
-  @include grid-adaptive($desktop-width, 1fr 1fr, 224px);
+  @include padding-adaptive($desktop-width, 58px $padding-desktop 75px);
+  @include grid-adaptive($desktop-width, 1fr 560px, 10px 224px);
   padding: 25px $padding-mobile 40px;
+
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid $border-secondary-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-top: none;
+  }
+}
+
+.example__content {
+  @include margin-adaptive($tablet-width, 0 0 104px);
+  @include margin-adaptive($desktop-width, 0);
+  margin-bottom: 20px;
 }
 
 .example__title {
@@ -23,27 +37,39 @@
   margin: 0 0 20px;
 }
 
-.example__data-container {
-  @include flex-setting(column, space-between, center, 34px, wrap);
-  @include flex-adaptive($tablet-width, row, space-between, center, 100px, nowrap);
-  @include flex-adaptive($desktop-width, column, center, flex-start, 55px, wrap);
+.example__desc br {
+  display: none;
 
   @media (min-width: $desktop-width) {
-    grid-column: 1;
+    display: block;
   }
 }
 
+.example__data-container {
+  @include flex-setting(column, space-between, center, 34px, wrap);
+  @include flex-adaptive($tablet-width, row, space-between, center, 100px, wrap);
+  @include flex-adaptive($desktop-width, column, center, flex-start, 60px, wrap);
+}
+
 .example__data-list {
-  @include grid-setting(1fr 1fr, 32px);
-  @include grid-adaptive($tablet-width, 162px 162px, 42px);
+  @include grid-setting(repeat(2, 124px), 32px);
+  @include grid-adaptive($tablet-width, repeat(2, 162px), 42px);
   text-align: center;
+
+  @media (max-width: $mobile-width-only) {
+    align-self: stretch;
+  }
 }
 
 .example__data-item {
   position: relative;
   border: 1px solid $border-color;
   border-radius: 3px;
-  padding: 14px 20px;
+  padding: 13px 14px;
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 15px 18px;
+  }
 }
 
 .example__data-desc {
@@ -51,13 +77,18 @@
   @include font-adaptive($tablet-width, 14px, 400, 14px);
   @include background-adaptive($tablet-width, $light-color);
   @include background-adaptive($desktop-width, $background-dark-color);
-  @include padding-adaptive($tablet-width, 0 5px 0);
   position: absolute;
   padding: 0 16px;
   left: 50%;
   bottom: -14px;
   transform: translateX(-50%);
   background-color: $background-dark-color;
+
+  @media (min-width: $tablet-width) {
+    bottom: -5px;
+    padding: 0 8px;
+    white-space: nowrap;
+  }
 }
 
 .example__data-value {
@@ -68,7 +99,7 @@
 
 .example__text-container {
   @include flex-adaptive($tablet-width, column, flex-end, flex-end, 9px, wrap);
-  @include flex-adaptive($desktop-width, row, flex-start, center, 63px, wrap);
+  @include flex-adaptive($desktop-width, row, flex-start, center, 67px, wrap);
 }
 
 .example__text {
@@ -77,11 +108,4 @@
   display: inline-block;
   margin: 0;
   text-transform: uppercase;
-}
-
-.example__slider-container {
-  @media (min-width: $desktop-width) {
-    grid-column: 2;
-    grid-row: 1/4;
-  }
 }

@@ -17,6 +17,18 @@
 
 .sub-product__link {
   @include flex-setting(row, flex-start, center, 0, nowrap);
+
+  &:not(:disabled):hover {
+    opacity: 0.8;
+  }
+
+  &:not(:disabled):active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 .sub-product__title {
