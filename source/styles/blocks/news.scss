@@ -1,6 +1,6 @@
 .news__container {
   @include padding-adaptive($tablet-width, 80px 68px);
-  @include padding-adaptive($desktop-width, 96px $padding-desktop 104px);
+  @include padding-adaptive($desktop-width, 95px $padding-desktop 104px);
   padding: 40px $padding-mobile;
 }
 

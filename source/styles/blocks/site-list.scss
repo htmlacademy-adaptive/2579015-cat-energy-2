@@ -5,6 +5,7 @@
 
   @media (min-width: $tablet-width) {
     border: none;
+    gap: 1px;
   }
 }
 
@@ -12,10 +13,10 @@
   @include font-setting($secondary-font, 20px, 400, 20px, $dark-color);
   @include font-adaptive($tablet-width, 18px, 400, 24px);
   @include font-adaptive($desktop-width, 20px, 400, 30px);
-  @include padding-adaptive($tablet-width, 14px 17px 12px);
-  @include padding-adaptive($desktop-width, 16px 16px 10px);
+  @include padding-adaptive($tablet-width, 14px 17px 10px);
+  @include padding-adaptive($desktop-width, 15px 17px 10px);
   display: block;
-  padding: 22px 16px 24px;
+  padding: 22px 16px 23.5px;
   background-color: $light-color;
   border-top: 1px solid $background-dark-color;
   text-transform: uppercase;
@@ -40,7 +41,11 @@
 
 .site-list__item:last-child .site-list__link {
   @media (min-width: $tablet-width) {
-    padding-right: 3.5px;
+    padding-right: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
   }
 }
 
@@ -53,7 +58,7 @@
       position: absolute;
       left: 17px;
       right: 17px;
-      bottom: -2px;
+      bottom: 2px;
       height: 2px;
       background-color: $accent-color;
     }

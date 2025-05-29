@@ -56,18 +56,22 @@
 .program__link {
   @include font-setting($secondary-font, 16px, 400, 16px, $dark-color);
   @include font-adaptive($tablet-width, 20px, 400, 30px);
-  @include background-image-setting(url("../../icons/stack.svg#icon_arrow"), 32px 12px, center right, no-repeat);
+  @include background-image-setting(url("../../icons/stack.svg#icon_arrow"), 24px 12px, center right 8px, no-repeat);
   display: inline-block;
-  padding: 4px 54px 4px 0;
+  padding: 4px 47px 4px 0;
   text-transform: uppercase;
 
-  @media (max-width: $mobile-width-only) {
-    padding-right: 44px;
+  @media (min-width: $tablet-width) {
+    padding-right: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 60px;
   }
 
   &:hover,
   &:active {
-    background-size: 32px 12px;
+    background-size: 32px 13px;
     background-position: center right;
   }
 

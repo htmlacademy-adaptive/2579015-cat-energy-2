@@ -1,13 +1,13 @@
 .sub-product {
   @include flex-setting(column, space-between, stretch, 13px, nowrap);
   @include grid-adaptive($tablet-width, 1fr 1fr, 25px 100px);
-  @include grid-adaptive($desktop-width, 1fr 285px 244px, 50px);
+  @include grid-adaptive($desktop-width, 1fr 285px 244px, 40px);
 }
 
 .sub-product__text-container {
   @include flex-setting(row, space-between, center, 20px, nowrap);
-  @include flex-adaptive($tablet-width, row, flex-end, center, 50px, nowrap);
-  @include flex-adaptive($desktop-width, row, space-between, center, 20px, nowrap);
+  @include flex-adaptive($tablet-width, row, flex-end, flex-end, 50px, nowrap);
+  @include flex-adaptive($desktop-width, row, space-between, center, 112px, nowrap);
 }
 
 .sub-product__text {

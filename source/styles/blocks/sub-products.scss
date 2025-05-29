@@ -15,12 +15,12 @@
 }
 
 .sub-products__list {
-  border-top: 1px solid #cdcdcd;
+  border-top: 1px solid $border-color;
   margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    border-left: 1px solid #cdcdcd;
-    border-right: 1px solid #cdcdcd;
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
     margin-bottom: 73px;
   }
 
@@ -33,18 +33,18 @@
 
 .sub-products__item {
   @include padding-adaptive($tablet-width, 26px 38px);
-  @include padding-adaptive($desktop-width, 15px 1px);
+  @include padding-adaptive($desktop-width, 14px 0 17px);
   padding: 13px 0 19px;
-  border-bottom: 1px solid #cdcdcd;
+  border-bottom: 1px solid $border-color;
 }
 
 .sub-products__promo {
   @include flex-setting(column, space-between, center, 48px, wrap);
   @include flex-adaptive($tablet-width, row, space-between, center, 264px, wrap);
   @include flex-adaptive($desktop-width, column, space-between, center, 46px, wrap);
-  @include background-image-setting((linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), image-set(url("../../images/background/promo_mobile@1x.jpg") 1x, url("../../images/background/promo_mobile@2x.jpg") 2x)), cover, left top, no-repeat);
-  @include background-image-adaptive($tablet-width, (linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), image-set(url("../../images/background/promo_tablet@1x.jpg") 1x, url("../../images/background/promo_tablet@2x.jpg") 2x)), cover, left top, no-repeat);
-  @include background-image-adaptive($desktop-width, (linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), image-set(url("../../images/background/promo_desktop@1x.jpg") 1x, url("../../images/background/promo_tablet@2x.jpg") 2x)), cover, left top, no-repeat);
+  @include background-image-setting((linear-gradient($accent-transparent-color,$accent-transparent-color), image-set(url("../../images/background/promo_mobile@1x.jpg") 1x, url("../../images/background/promo_mobile@2x.jpg") 2x)), cover, left top, no-repeat);
+  @include background-image-adaptive($tablet-width, (linear-gradient($accent-transparent-color,$accent-transparent-color), image-set(url("../../images/background/promo_tablet@1x.jpg") 1x, url("../../images/background/promo_tablet@2x.jpg") 2x)), cover, left top, no-repeat);
+  @include background-image-adaptive($desktop-width, (linear-gradient($accent-transparent-color,$accent-transparent-color), image-set(url("../../images/background/promo_desktop@1x.jpg") 1x, url("../../images/background/promo_desktop@2x.jpg") 2x)), cover, left top, no-repeat);
   @include padding-adaptive($tablet-width, 57px 125px 60px 77px);
   @include padding-adaptive($desktop-width, 56px 42px 43px);
   padding: 59px 58px 43px;
@@ -53,9 +53,9 @@
 
   // Поддержка WebP через @supports
   @supports (background-image: image-set(url("../../images/background/promo_mobile@1x.webp") 1x)) {
-    @include background-image-setting((linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), image-set(url("../../images/background/promo_mobile@1x.webp") 1x, url("../../images/background/promo_mobile@2x.webp") 2x)), cover, left top, no-repeat);
-    @include background-image-adaptive($tablet-width, (linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), image-set(url("../../images/background/promo_tablet@1x.webp") 1x, url("../../images/background/promo_tablet@2x.webp") 2x)), cover, left top, no-repeat);
-    @include background-image-adaptive($desktop-width, (linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)), image-set(url("../../images/background/promo_desktop@1x.webp") 1x, url("../../images/background/promo_tablet@2x.webp") 2x)), cover, left top, no-repeat);
+    @include background-image-setting((linear-gradient($accent-transparent-color,$accent-transparent-color), image-set(url("../../images/background/promo_mobile@1x.webp") 1x, url("../../images/background/promo_mobile@2x.webp") 2x)), cover, left top, no-repeat);
+    @include background-image-adaptive($tablet-width, (linear-gradient($accent-transparent-color,$accent-transparent-color), image-set(url("../../images/background/promo_tablet@1x.webp") 1x, url("../../images/background/promo_tablet@2x.webp") 2x)), cover, left top, no-repeat);
+    @include background-image-adaptive($desktop-width, (linear-gradient($accent-transparent-color,$accent-transparent-color), image-set(url("../../images/background/promo_desktop@1x.webp") 1x, url("../../images/background/promo_desktop@2x.webp") 2x)), cover, left top, no-repeat);
   }
 
   &::before {

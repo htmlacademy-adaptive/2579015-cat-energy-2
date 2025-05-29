@@ -2,10 +2,7 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    // top: -13px;
     width: 100%;
-    // height: 462px;
-    // background-color: $background-dark-color;
 
     &::before {
       content: "";
@@ -13,14 +10,10 @@
       left: 0;
       width: 100%;
       height: 100%;
-      // background-color: $background-dark-color;
-      // box-shadow: -200px 0 0 $background-dark-color;
     }
   }
 
   @media (min-width: $desktop-width) {
-    // position: absolute;
-    // top: 0;
     padding: 0;
     background-color: transparent;
 
@@ -37,17 +30,9 @@
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    // top: -151px;
     width: 560px;
     height: 512px;
   }
-
-  // @media (min-width: $desktop-width) {
-  //   // position: absolute;
-  //   // top: 0;
-  //   // left: 770px;
-  //   margin: 0;
-  // }
 }
 
 .slider__images {
@@ -63,15 +48,11 @@
 }
 
 .slider__before {
-  // width: 100%;
-  // height: 100%;
   display: block;
   clip-path: inset(0 50% 0 0);
 }
 
 .slider__after {
-  // width: 100%;
-  // height: 100%;
   display: block;
   clip-path: inset(0 0 0 50%);
 }

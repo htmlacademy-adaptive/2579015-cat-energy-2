@@ -57,11 +57,11 @@
       @include background-image-setting(url("../../icons/stack.svg#plus"), 60px 60px, center, no-repeat);
       width: 60px;
       height: 60px;
-      margin: 100px 0 50px;
+      margin: 50px 0;
     }
 
     @media (min-width: $desktop-width) {
-      margin: 98px 0 40px;
+      margin-bottom: 40px;
     }
   }
 }
@@ -133,8 +133,8 @@
 .product-card__title {
   @include font-setting($secondary-font, 16px, 400, 20px, $title-default-color);
   @include font-adaptive($tablet-width, 20px, 400, 24px);
-  @include margin-adaptive($tablet-width, 0 57px 13px);
-  @include margin-adaptive($desktop-width, 0 14px 15px);
+  @include margin-adaptive($tablet-width, 0 57px 20px);
+  @include margin-adaptive($desktop-width, 0 14px 23.5px);
   margin: 0 65px 16px 0;
   text-transform: uppercase;
 
@@ -161,8 +161,12 @@
   text-align: left;
 
   @media (min-width: $tablet-width) {
-    padding: 6px 0;
+    padding: 7px 0 4px;
     border-bottom: 1px solid $border-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 6px 0 5px;
   }
 }
 
@@ -172,8 +176,26 @@
   padding: 0;
 
   @media (min-width: $tablet-width) {
-    padding: 6px 0;
+    padding: 7px 0 4px;
     border-bottom: 1px solid $border-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 6px 0 5px;
+  }
+}
+
+.product-card__records-value:first-of-type,
+.product-card__records-desc:first-of-type {
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+}
+
+.product-card__records-value:last-of-type,
+.product-card__records-desc:last-of-type {
+  @media (min-width: $desktop-width) {
+    padding-bottom: 10.5px;
   }
 }
 

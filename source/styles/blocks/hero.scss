@@ -8,7 +8,11 @@
 
   @media (min-width: $desktop-width) {
     &::before {
-      @include background-image-setting((linear-gradient(to right, $accent-transparent-color 1030px, $accent-secondary-color 1030px), image-set(url("../../images/background/hero_background_desktop@1x.jpg") 1x, url("../../images/background/hero_background_desktop@2x.jpg") 2x)), cover, left top,no-repeat);
+      @include background-image-setting((linear-gradient(to right, $accent-transparent-color 1030px, $accent-secondary-color 1030px),
+      image-set(url("../../images/background/hero_background_desktop@1x.webp") type("image/webp") 1x,
+      url("../../images/background/hero_background_desktop@2x.webp") type("image/webp") 2x,
+      url("../../images/background/hero_background_desktop@1x.jpg") type("image/jpeg") 1x,
+      url("../../images/background/hero_background_desktop@2x.jpg") type("image/jpeg") 2x)), (cover, 1030px 100%), left top,no-repeat);
       content: "";
       position: absolute;
       width: 50%;
@@ -17,7 +21,7 @@
       left: 50%;
       bottom: 0;
       z-index: -1;
-      box-shadow: 0 -700px 0 0 $accent-secondary-color;
+      box-shadow: 0 -694px 0 0 $accent-secondary-color;
     }
   }
 }
@@ -30,7 +34,11 @@
   position: relative;
 
   @media (max-width: $mobile-width-only) {
-    @include background-image-setting((linear-gradient($accent-transparent-color 63%, $light-color 63%), image-set(url("../../images/background/hero_background_mobile@1x.jpg") 1x, url("../../images/background/hero_background_mobile@2x.jpg") 2x)), (320px 100%, 320px 63%), (center, center top), no-repeat);
+    @include background-image-setting((linear-gradient($accent-transparent-color 63%, $light-color 63%),
+    image-set(url("../../images/background/hero_background_mobile@1x.webp") type("image/webp") 1x,
+    url("../../images/background/hero_background_mobile@2x.webp") type("image/webp") 2x,
+    url("../../images/background/hero_background_mobile@1x.jpg") type("image/jpeg") 1x,
+    url("../../images/background/hero_background_mobile@2x.jpg") type("image/jpeg") 2x)), (320px 100%, 320px 63%), (center, center top), no-repeat);
   }
 
   @media (min-width: $tablet-width) {
@@ -62,6 +70,7 @@
   @include font-setting($secondary-font, 14px, 400, 14px, $dark-color);
   @include font-adaptive($tablet-width, 20px, 400, 20px);
   @include margin-adaptive($tablet-width, 0 0 50px);
+  @include margin-adaptive($desktop-width, 0 0 52px);
   margin: 0;
   margin-bottom: 29px;
   text-transform: uppercase;
@@ -80,7 +89,7 @@
 
   @media (min-width: $desktop-width) {
     top: 29px;
-    left: 555px;
+    left: 557px;
   }
 }
 

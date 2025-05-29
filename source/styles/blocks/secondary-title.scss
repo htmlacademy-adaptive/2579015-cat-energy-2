@@ -17,9 +17,14 @@
   right: 0;
   background-color: $accent-color;
   box-shadow: 100vw 0 0 $accent-color;
+  transform: translateY(-50%);
   z-index: -1;
 
   @media (min-width: $tablet-width) {
-    top: 12px;
+    top: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 20px;
   }
 }

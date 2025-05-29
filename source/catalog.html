@@ -11,6 +11,10 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=5cb297c1-5ade-45cd-bb95-7d4947a8c068&lang=ru_RU" defer></script>
+  <link rel="preload" as="font" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/lato/Lato-Regular.woff" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/oswald/oswaldregular.woff" type="font/woff" crossorigin="anonymous">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -27,9 +31,9 @@
         </a>
         <a class="main-header__logo-brand logo" href="index.html">
           <picture>
-            <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/brand_tablet.svg">
-            <source width="101" height="18" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/brand_tablet.svg">
-            <img class="logo__brand" src="images/logo/brand.svg" width="101" height="21" alt="Бренд">
+            <source width="118" height="22" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/brand_tablet.svg">
+            <source width="101" height="19" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/brand_tablet.svg">
+            <img class="logo__image" src="images/logo/brand.svg" width="101" height="21" alt="Бренд">
           </picture>
         </a>
       </div>
@@ -87,8 +91,10 @@
             <div class="product-card__image-container">
               <a class="product-card__link" href="#">
                 <picture>
+                  <source width="172" height="196" type="image/webp" media="(min-width: 1440px)" srcset="images/products/card_chicken1000_desktop@1x.webp 1x, images/products/card_chicken1000_desktop@2x.webp 2x">
                   <source width="168" height="206" type="image/webp" media="(min-width: 768px)" srcset="images/products/card_chicken1000_tablet@1x.webp 1x, images/products/card_chicken1000_tablet@2x.webp 2x">
                   <source width="84" height="100" type="image/webp" srcset="images/products/card_chicken1000_mobile@1x.webp 1x, images/products/card_chicken1000_mobile@2x.webp 2x">
+                  <source width="172" height="196" type="image/png" media="(min-width: 1440px)" srcset="images/products/card_chicken1000_desktop@1x.png 1x, images/products/card_chicken1000_desktop@2x.png 2x">
                   <source width="168" height="206" type="image/png" media="(min-width: 768px)" srcset="images/products/card_chicken1000_tablet@1x.png 1x, images/products/card_chicken1000_tablet@2x.png 2x">
                   <img class="product-card__image" src="images/products/card_chicken500_mobile@1x.png" srcset="images/products/card_chicken1000_mobile@2x.png 2x" width="84" height="100" alt="Продукт Кэт энерджи с курицей 1000г">
                 </picture>
@@ -104,7 +110,7 @@
                 <dt class="product-card__records-desc">Вкус</dt>
                 <dd class="product-card__records-value">Курица</dd>
                 <dt class="product-card__records-desc">Цена</dt>
-                <dd class="product-card__records-value">1000 ₽</dd>
+                <dd class="product-card__records-value">1000 &nbsp;₽</dd>
               </dl>
             </div>
             <a class="product-card__button button reset-link" href="#">Заказать</a>
@@ -139,8 +145,10 @@
             <div class="product-card__image-container">
               <a class="product-card__link" href="#">
                 <picture>
+                  <source width="172" height="196" type="image/webp" media="(min-width: 1440px)" srcset="images/products/card_fish1000_desktop@1x.webp 1x, images/products/card_fish1000_desktop@2x.webp 2x">
                   <source width="168" height="200" type="image/webp" media="(min-width: 768px)" srcset="images/products/card_fish1000_tablet@1x.webp 1x, images/products/card_fish1000_tablet@2x.webp 2x">
                   <source width="84" height="100" type="image/webp" srcset="images/products/card_fish1000_mobile@1x.webp 1x, images/products/card_fish1000_mobile@2x.webp 2x">
+                  <source width="172" height="196" type="image/png" media="(min-width: 1440px)" srcset="images/products/card_fish1000_desktop@1x.png 1x, images/products/card_fish1000_desktop@2x.png 2x">
                   <source width="168" height="200" type="image/png" media="(min-width: 768px)" srcset="images/products/card_fish1000_tablet@1x.png 1x, images/products/card_fish1000_tablet@2x.png 2x">
                   <img class="product-card__image" src="images/products/card_fish1000_mobile@1x.png" srcset="images/products/card_fish1000_mobile@2x.png 2x" width="84" height="100" alt="Продукт Кэт энерджи с рыбой 1000г">
                 </picture>
@@ -191,8 +199,10 @@
             <div class="product-card__image-container">
               <a class="product-card__link" href="#">
                 <picture>
+                  <source width="172" height="196" type="image/webp" media="(min-width: 1440px)" srcset="images/products/card_buckwheat1000_desktop@1x.webp 1x, images/products/card_buckwheat1000_desktop@2x.webp 2x">
                   <source width="168" height="200" type="image/webp" media="(min-width: 768px)" srcset="images/products/card_buckwheat1000_tablet@1x.webp 1x, images/products/card_buckwheat1000_tablet@2x.webp 2x">
                   <source width="84" height="100" type="image/webp" srcset="images/products/card_buckwheat1000_mobile@1x.webp 1x, images/products/card_buckwheat1000_mobile@2x.webp 2x">
+                  <source width="172" height="196" type="image/png" media="(min-width: 1440px)" srcset="images/products/card_buckwheat1000_desktop@1x.png 1x, images/products/card_buckwheat1000_desktop@2x.png 2x">
                   <source width="168" height="200" type="image/png" media="(min-width: 768px)" srcset="images/products/card_buckwheat1000_tablet@1x.png 1x, images/products/card_buckwheat1000_tablet@2x.png 2x">
                   <img class="product-card__image" src="images/products/card_buckwheat1000_mobile@1x.png" srcset="images/products/card_buckwheat1000_mobile@2x.png 2x" width="84" height="100" alt="Продукт Кэт энерджи с гречкой 1000г">
                 </picture>
@@ -296,7 +306,7 @@
             </li>
           </ul>
           <div class="sub-products__promo">
-            <p class="sub-products__promo-text">Закажите все <br>и получите чехол для <br>кота в подарок!</p>
+            <p class="sub-products__promo-text">Закажите все <br class="break">и получите чехол для <br class="break">кота в подарок!</p>
           </div>
         </div>
       </div>
@@ -307,14 +317,14 @@
         <p class="news__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="subscribe-email">Введите e-mail</label>
-          <input class="subscribe-form__control" type="email" name="subscribe-email" id="subscribe-email" placeholder="кuklachev@gmail.com">
+          <input class="subscribe-form__control" type="email" name="subscribe-email" id="subscribe-email" placeholder="кuklachev@gmail.com" required>
           <button class="subscribe-form__button button" type="submit">Подписаться</button>
         </form>
       </div>
     </section>
     <section class="invite invite--special">
       <div class="invite__container page-container">
-        <h2 class="invite__title">Приглашаем<br> к сотрудничеству дилеров!</h2>
+        <h2 class="invite__title">Приглашаем<br class="break"> к сотрудничеству дилеров!</h2>
         <address class="invite__contacts address">
           <p class="address__street">ул. Большая Конюшенная, д. 19/8</p>
           <p class="address__city">Санкт-Петербург</p>

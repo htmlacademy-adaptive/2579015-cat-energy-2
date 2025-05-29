@@ -1,6 +1,6 @@
 .example {
   @include background-adaptive($tablet-width, linear-gradient($light-color 57.3%, $background-dark-color 57.3%));
-  @include background-adaptive($desktop-width, linear-gradient($light-color 30%, $background-dark-color 30%));
+  @include background-adaptive($desktop-width, linear-gradient($light-color 29.5%, $background-default-color 29.5%));
   background-color: $background-dark-color;
 }
 
@@ -37,7 +37,7 @@
   margin: 0 0 20px;
 }
 
-.example__desc br {
+.example__desc .break {
   display: none;
 
   @media (min-width: $desktop-width) {
@@ -76,11 +76,11 @@
   @include font-setting-short(12px, 400, 12px);
   @include font-adaptive($tablet-width, 14px, 400, 14px);
   @include background-adaptive($tablet-width, $light-color);
-  @include background-adaptive($desktop-width, $background-dark-color);
+  @include background-adaptive($desktop-width, $background-default-color);
   position: absolute;
   padding: 0 16px;
-  left: 50%;
   bottom: -14px;
+  left: 50%;
   transform: translateX(-50%);
   background-color: $background-dark-color;
 

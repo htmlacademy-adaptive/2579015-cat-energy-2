@@ -7,7 +7,7 @@
 .subscribe-form__control {
   @include font-setting($secondary-font, 20px, 400, 30px, $basic-color);
   text-transform: uppercase;
-  padding: 13px;
+  padding: 12px;
   border: 1px solid $border-color;
   border-radius: 0;
 }

@@ -1,5 +1,6 @@
 .invite {
   position: relative;
+  background-color: $light-color;
 }
 
 .invite--special {
@@ -13,7 +14,6 @@
   @include padding-adaptive($tablet-width, 60px 70px);
   @include padding-adaptive($desktop-width, 61px 78px);
   padding: 26px $padding-mobile;
-  background-color: $light-color;
 
   @media (min-width: $desktop-width) {
     position: absolute;
@@ -21,6 +21,7 @@
     top: 95px;
     right: calc(50% + 45px);
     z-index: 1;
+    background-color: $light-color;
   }
 }
 
