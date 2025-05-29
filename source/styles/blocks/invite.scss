@@ -1,0 +1,37 @@
+.invite {
+  position: relative;
+  background-color: $light-color;
+}
+
+.invite--special {
+  @include background-adaptive($desktop-width, $light-color);
+  background-color: $background-default-color;
+}
+
+.invite__container {
+  @include grid-setting(140px 1fr 140px, 0);
+  @include grid-adaptive($tablet-width, 163px 1fr 157px, 0);
+  @include padding-adaptive($tablet-width, 60px 70px);
+  @include padding-adaptive($desktop-width, 61px 78px);
+  padding: 26px $padding-mobile;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    width: 565px;
+    top: 95px;
+    right: calc(50% + 45px);
+    z-index: 1;
+    background-color: $light-color;
+  }
+}
+
+.invite__title {
+  @include font-setting($secondary-font, 16px, 400, 20px, $title-special-color);
+  @include font-adaptive($tablet-width, 20px, 400, 26px);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.invite__contacts {
+  grid-column: 3;
+}

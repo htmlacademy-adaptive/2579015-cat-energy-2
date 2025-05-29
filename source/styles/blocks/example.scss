@@ -1,0 +1,111 @@
+.example {
+  @include background-adaptive($tablet-width, linear-gradient($light-color 57.3%, $background-dark-color 57.3%));
+  @include background-adaptive($desktop-width, linear-gradient($light-color 29.5%, $background-default-color 29.5%));
+  background-color: $background-dark-color;
+}
+
+.example__container {
+  @include padding-adaptive($tablet-width, 45px $padding-tablet 101px);
+  @include padding-adaptive($desktop-width, 58px $padding-desktop 75px);
+  @include grid-adaptive($desktop-width, 1fr 560px, 10px 224px);
+  padding: 25px $padding-mobile 40px;
+
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid $border-secondary-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-top: none;
+  }
+}
+
+.example__content {
+  @include margin-adaptive($tablet-width, 0 0 104px);
+  @include margin-adaptive($desktop-width, 0);
+  margin-bottom: 20px;
+}
+
+.example__title {
+  @include margin-adaptive($tablet-width, 0 0 60px);
+  @include margin-adaptive($desktop-width, 0 0 146px 0);
+  margin: 0 0 40px;
+}
+
+.example__desc {
+  @include margin-adaptive($tablet-width, 0 0 55px);
+  @include margin-adaptive($desktop-width, 0 0 69px);
+  margin: 0 0 20px;
+}
+
+.example__desc .break {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.example__data-container {
+  @include flex-setting(column, space-between, center, 34px, wrap);
+  @include flex-adaptive($tablet-width, row, space-between, center, 100px, wrap);
+  @include flex-adaptive($desktop-width, column, center, flex-start, 60px, wrap);
+}
+
+.example__data-list {
+  @include grid-setting(repeat(2, 124px), 32px);
+  @include grid-adaptive($tablet-width, repeat(2, 162px), 42px);
+  text-align: center;
+
+  @media (max-width: $mobile-width-only) {
+    align-self: stretch;
+  }
+}
+
+.example__data-item {
+  position: relative;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  padding: 13px 14px;
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 15px 18px;
+  }
+}
+
+.example__data-desc {
+  @include font-setting-short(12px, 400, 12px);
+  @include font-adaptive($tablet-width, 14px, 400, 14px);
+  @include background-adaptive($tablet-width, $light-color);
+  @include background-adaptive($desktop-width, $background-default-color);
+  position: absolute;
+  padding: 0 16px;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $background-dark-color;
+
+  @media (min-width: $tablet-width) {
+    bottom: -5px;
+    padding: 0 8px;
+    white-space: nowrap;
+  }
+}
+
+.example__data-value {
+  @include font-setting($secondary-font, 24px, 400, 24px, $dark-color);
+  @include font-adaptive($tablet-width, 30px, 400, 37px);
+  display: inline-block;
+}
+
+.example__text-container {
+  @include flex-adaptive($tablet-width, column, flex-end, flex-end, 9px, wrap);
+  @include flex-adaptive($desktop-width, row, flex-start, center, 67px, wrap);
+}
+
+.example__text {
+  @include font-setting($secondary-font, 14px, 400, 20px, $dark-color);
+  @include font-adaptive($tablet-width, 20px, 400, 20px);
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+}

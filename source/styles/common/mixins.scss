@@ -1,0 +1,99 @@
+// Подключение шрифта
+@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    src: $font-src;
+    font-display: swap;
+  }
+}
+
+// Настройка шрифта
+@mixin font-setting($font-family, $font-size, $font-weight, $line-height, $color) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+// Настройка шрифта(укороченный вариант)
+@mixin font-setting-short($font-size, $font-weight, $line-height) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+// Настройка шрифта для заданной ширины
+@mixin font-adaptive($width, $font-size, $font-weight, $line-height) {
+  @media (min-width: $width) {
+    @include font-setting-short($font-size, $font-weight, $line-height);
+  }
+}
+
+// Настройка фона для заданной ширины
+@mixin background-adaptive($width, $background) {
+  @media (min-width: $width) {
+    background: $background;
+  }
+}
+
+// Настройка картинки
+@mixin background-image-setting($background-image, $background-size, $background-position, $background-repeat) {
+  background-image: $background-image;
+  background-size: $background-size;
+  background-position: $background-position;
+  background-repeat: $background-repeat;
+}
+
+// Настройка картинки для заданной ширины
+@mixin background-image-adaptive($width, $background-image, $background-size, $background-position, $background-repeat) {
+  @media (min-width: $width) {
+    @include background-image-setting($background-image, $background-size, $background-position, $background-repeat);
+  }
+}
+
+// Настройка флекс сетки
+@mixin flex-setting($flex-direction:row, $justify-content:flex-start, $align-items:stretch, $gap:0, $flex-wrap:nowrap) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-flow: $flex-direction $flex-wrap;
+  gap: $gap;
+}
+
+// Настройка флекс сетки для заданной ширины
+@mixin flex-adaptive($width, $flex-direction, $justify-content, $align-items, $gap, $flex-wrap) {
+  @media (min-width: $width) {
+    @include flex-setting($flex-direction, $justify-content, $align-items, $gap, $flex-wrap);
+  }
+}
+
+// Настройка грид сетки
+@mixin grid-setting($grid-template-columns, $gap) {
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+  grid-gap: $gap;
+}
+
+// Настройка грид сетки для заданной ширины
+@mixin grid-adaptive($width, $grid-template-columns, $gap) {
+  @media (min-width: $width) {
+    @include grid-setting($grid-template-columns, $gap);
+  }
+}
+
+// Настройка внутренних отступов для заданной ширины
+@mixin padding-adaptive($width, $padding) {
+  @media (min-width: $width) {
+    padding: $padding;
+  }
+}
+
+// Настройка внешних отступов для заданной ширины
+@mixin margin-adaptive($width, $margin) {
+  @media (min-width: $width) {
+    margin: $margin;
+  }
+}

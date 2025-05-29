@@ -1,0 +1,81 @@
+.program {
+  @include padding-adaptive($tablet-width, 77px 315px 53px 53px);
+  @include padding-adaptive($desktop-width, 77px 61px 55px 52px);
+  padding: 30px 33px 18px 20px;
+  position: relative;
+  background-color: $background-default-color;
+
+  @media (max-width: $mobile-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      left: $padding-mobile;
+      right: $padding-mobile;
+      bottom: 57px;
+      background-color: $border-special-color;
+    }
+  }
+}
+
+.program--slim {
+  @include background-image-setting(url("../../icons/stack.svg#cat_slim"), 50px 53px, left 20px top 21px, no-repeat);
+  @include background-image-adaptive($tablet-width, url("../../icons/stack.svg#cat_slim"), 200px 211px, right 63px top 81px, no-repeat);
+  @include background-image-adaptive($desktop-width, url("../../icons/stack.svg#cat_slim"), 100px 106px, left 52px top 41px, no-repeat);
+}
+
+.program--pro {
+  @include background-image-setting(url("../../icons/stack.svg#cat_pro"), 67px 50px, left 13px top 24px, no-repeat);
+  @include background-image-adaptive($tablet-width, url("../../icons/stack.svg#cat_pro"), 268px 200px, right 30px top 91px, no-repeat);
+  @include background-image-adaptive($desktop-width, url("../../icons/stack.svg#cat_pro"), 134px 100px, left 33px top 47px, no-repeat);
+}
+
+.program__title {
+  @include font-setting($secondary-font, 24px, 400, 37px, $dark-color);
+  @include font-adaptive($tablet-width, 36px, 400, 36px);
+  @include padding-adaptive($tablet-width, 0);
+  @include padding-adaptive($desktop-width, 0 0 0 160px);
+  @include margin-adaptive($tablet-width, 0 0 24px 0);
+  @include margin-adaptive($desktop-width, 0 0 73px 0);
+  margin: 0;
+  margin-bottom: 29px;
+  padding-left: 70px;
+  text-transform: uppercase;
+}
+
+.program__desc {
+  @include margin-adaptive($tablet-width, 0 0 48px 0);
+  @include margin-adaptive($desktop-width, 0 0 23px 0);
+  margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    color: $dark-color;
+  }
+}
+
+.program__link {
+  @include font-setting($secondary-font, 16px, 400, 16px, $dark-color);
+  @include font-adaptive($tablet-width, 20px, 400, 30px);
+  @include background-image-setting(url("../../icons/stack.svg#icon_arrow"), 24px 12px, center right 8px, no-repeat);
+  display: inline-block;
+  padding: 4px 47px 4px 0;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 60px;
+  }
+
+  &:hover,
+  &:active {
+    background-size: 32px 13px;
+    background-position: center right;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

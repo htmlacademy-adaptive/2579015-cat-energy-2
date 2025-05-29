@@ -1,0 +1,30 @@
+.secondary-title {
+  @include font-setting($secondary-font, 24px, 400, 24px, $dark-color);
+  @include font-adaptive($tablet-width, 32px, 400, 32px);
+  @include font-adaptive($desktop-width, 40px, 400, 40px);
+  position: relative;
+  width: fit-content;
+  background-color: $light-color;
+  box-shadow: 40px 0 0 0 $light-color, -40px 0 0 0 $light-color;
+}
+
+.secondary-title::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 2px;
+  top: 10px;
+  right: 0;
+  background-color: $accent-color;
+  box-shadow: 100vw 0 0 $accent-color;
+  transform: translateY(-50%);
+  z-index: -1;
+
+  @media (min-width: $tablet-width) {
+    top: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 20px;
+  }
+}

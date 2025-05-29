@@ -1,0 +1,39 @@
+.social-list {
+  @include flex-setting(row, center, center, 24px, wrap);
+}
+
+.social-list__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+  background-color: #666666;
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus-visible,
+  &:not(:disabled):active {
+    background-color: $accent-color;
+  }
+
+  &:not(:disabled):active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
+}
+
+.social-list__link--vk {
+  mask-image: url("../../icons/stack.svg#vk");
+  mask-position: center;
+}
+
+.social-list__link--telegram {
+  mask-image: url("../../icons/stack.svg#telegram");
+  mask-position: center;
+}
+
+.social-list__link--youtube {
+  mask-image: url("../../icons/stack.svg#youtube");
+  mask-position: center;
+}
