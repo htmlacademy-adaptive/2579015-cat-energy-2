@@ -55,3 +55,9 @@
     opacity: 0.3;
   }
 }
+
+.main-header__logo-image,
+.main-footer__logo-brand {
+  display: block;
+  object-fit: contain;
+}

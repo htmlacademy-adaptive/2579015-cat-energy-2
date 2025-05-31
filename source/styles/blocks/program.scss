@@ -57,6 +57,7 @@
   @include font-setting($secondary-font, 16px, 400, 16px, $dark-color);
   @include font-adaptive($tablet-width, 20px, 400, 30px);
   @include background-image-setting(url("../../icons/stack.svg#icon_arrow"), 24px 12px, center right 8px, no-repeat);
+  position: relative;
   display: inline-block;
   padding: 4px 47px 4px 0;
   text-transform: uppercase;
@@ -70,9 +71,19 @@
     padding-right: 60px;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    width: 24px;
+    height: 2px;
+    background-color: $dark-color;
+    transform: translateY(-50%);
+  }
+
   &:hover,
   &:active {
-    background-size: 32px 12px;
     background-position: center right;
   }
 
