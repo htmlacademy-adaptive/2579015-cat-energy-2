@@ -36,16 +36,13 @@
   }
 }
 
-.main-header__logo-container {
+.main-header__logo-link {
   @include flex-setting(row, space-between, center, 56px, nowrap);
 
   @media (min-width: $tablet-width) {
     gap: 13px;
   }
-}
 
-.main-header__logo-image,
-.main-header__logo-brand {
   &:not(:disabled):hover {
     opacity: 0.8;
   }
@@ -57,4 +54,10 @@
   &:disabled {
     opacity: 0.3;
   }
+}
+
+.main-header__logo-image,
+.main-footer__logo-brand {
+  display: block;
+  object-fit: contain;
 }
