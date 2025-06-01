@@ -15,6 +15,6 @@
 .benefits__list {
   @include flex-setting(column, space-between, start, 20px, wrap);
   @include grid-adaptive($tablet-width, repeat(2, 1fr), 135px);
-  @include grid-adaptive($desktop-width, repeat(4, 1fr), 40px 75px);
+  @include grid-adaptive($desktop-width, repeat(4, 1fr), 90px 75px);
   counter-reset: benefit 0;
 }
